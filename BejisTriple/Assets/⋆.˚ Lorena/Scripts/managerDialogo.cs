@@ -9,15 +9,20 @@ public class managerDialogo : MonoBehaviour
     public TextMeshProUGUI nombreTexto;
     public TextMeshProUGUI dialogoTexto;
     public Image imagenPJ;
+    public GameObject panelOpciones;
+
+    [Header("Bloqueo de interacción")]
+    public GameObject bloqueadorInput;
 
     private dialogoSO dialogoActual;
+    private opcionDialogo opcionDialogo;
     private int indiceLineaActual = 0;
     private bool dialogoActivo = false;
 
     void Update()
     {
         if (dialogoActivo && Input.GetKeyDown(KeyCode.E) ||
-            dialogoActivo && Input.GetKeyDown(KeyCode.Enter))
+            dialogoActivo && Input.GetKeyDown(KeyCode.Space))
         {
             MuestraSiguienteLinea();
         }
@@ -26,6 +31,9 @@ public class managerDialogo : MonoBehaviour
     public void IniciarDialogo(dialogoSO nuevoDialogo)
     {
         if (nuevoDialogo == null || nuevoDialogo.lineas.Length == 0) return;
+
+        bloqueadorInput.SetActive(true);
+        panelOpciones.SetActive(false);
 
         dialogoActual = nuevoDialogo;
         indiceLineaActual = 0;
@@ -50,7 +58,7 @@ public class managerDialogo : MonoBehaviour
 
     void MostrarLinea(lineaDialogo linea)
     {
-        nombreTexto.text = linea.nombrePJ;
+        nombreTexto.text = dialogoActual.nombrePJ;
         dialogoTexto.text = linea.textoDialogo;
         imagenPJ.sprite = linea.expresionPJ;
     }
@@ -59,5 +67,7 @@ public class managerDialogo : MonoBehaviour
     {
         dialogoActivo = false;
         panelDialogo.SetActive(false);
+        bloqueadorInput.SetActive(false); 
+        panelOpciones.SetActive(true);
     }
 }
