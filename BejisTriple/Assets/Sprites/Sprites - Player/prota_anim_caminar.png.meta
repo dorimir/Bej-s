@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -37,13 +37,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +52,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -95,12 +95,276 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: prota_anim_caminar_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 836
+        width: 380
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c537e8d36b11d64a860a4dd20fb3603
+      internalID: -1403204188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 832
+        width: 380
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fac64f71f46a3458beb0f91368a678
+      internalID: 1261661703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_2
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 832
+        width: 444
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb146d3d940cda04a859cdb319e66d33
+      internalID: -500672843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_3
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 831
+        width: 380
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ddae0401156264da4332c4ec2bde80
+      internalID: -1028015788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_4
+      rect:
+        serializedVersion: 2
+        x: 2093
+        y: 833
+        width: 380
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea298011e0a17744a84ba65f7de5aca3
+      internalID: -565778147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_5
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 827
+        width: 407
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd3f40afe7479a4ca2882f96775b29a
+      internalID: 1962574809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_6
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 133
+        width: 328
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759259a0b206fd545b3e8eb1fcf7ac07
+      internalID: -1530872898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_7
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 130
+        width: 328
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe206c8970e7754294f966f76cdefbc
+      internalID: -28914146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 133
+        width: 404
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18509576d58cb834fb8c304c4862d9f4
+      internalID: 312752871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_9
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 128
+        width: 444
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cb5f42c70634f499f2662a3e6c4ed5
+      internalID: 799010034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_10
+      rect:
+        serializedVersion: 2
+        x: 1745
+        y: 130
+        width: 328
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79335d4b1f9e4504d8475b6ee47b102e
+      internalID: 1179597789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_anim_caminar_11
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 131
+        width: 337
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb019292e5a18ae409c2a1c4635256a5
+      internalID: 276035503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2617c3fa77125ea458c6644d2d61d10f
     internalID: 0
     vertices: []
     indices: 
@@ -109,7 +373,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      prota_anim_caminar_0: -1403204188
+      prota_anim_caminar_1: 1261661703
+      prota_anim_caminar_10: 1179597789
+      prota_anim_caminar_11: 276035503
+      prota_anim_caminar_2: -500672843
+      prota_anim_caminar_3: -1028015788
+      prota_anim_caminar_4: -565778147
+      prota_anim_caminar_5: 1962574809
+      prota_anim_caminar_6: -1530872898
+      prota_anim_caminar_7: -28914146
+      prota_anim_caminar_8: 312752871
+      prota_anim_caminar_9: 799010034
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
