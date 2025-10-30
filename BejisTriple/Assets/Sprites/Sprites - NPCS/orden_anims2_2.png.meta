@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f2a131fcd435d7d4cb77d59213822b2b
+guid: 8039899ad0d66454c832f0f5c3988b73
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arquero_idle_1
+      name: monja_idle_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 876
-        width: 229
-        height: 541
+        x: 87
+        y: 1082
+        width: 253
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83937d246ab6d4f429d480a3067352c4
-      internalID: 239613700
+      spriteID: 8eb714797292fcc499e2740b8afcf171
+      internalID: 440301402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arquero_idle_2
+      name: monja_idle2
       rect:
         serializedVersion: 2
-        x: 400
-        y: 876
-        width: 229
-        height: 541
+        x: 488
+        y: 1082
+        width: 253
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dbe1be19b36c0044b995a073affa265
-      internalID: 171715846
+      spriteID: 2eb521ddebc92b14692f02d96d1acd84
+      internalID: 1177357356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arquero_idle_3
+      name: monja_talk1
       rect:
         serializedVersion: 2
-        x: 701
-        y: 876
-        width: 229
-        height: 541
+        x: 837
+        y: 1082
+        width: 253
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebf206ed9b5ab1d49a35713f851d6c1e
-      internalID: -1338015190
+      spriteID: 6f70106e80e426941beee9c98d8e126d
+      internalID: 955024475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arquero_talk_1
+      name: monja_talk2
       rect:
         serializedVersion: 2
-        x: 1032
-        y: 876
-        width: 295
-        height: 541
+        x: 1219
+        y: 1082
+        width: 253
+        height: 619
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7adf2b338682ee944a4dbcd0ecc3dadd
-      internalID: -668882311
+      spriteID: c7bd7ecf2171fda4587bc51615885e95
+      internalID: -806545994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: arquero_talk_2
+      name: calatrava2_idle1
       rect:
         serializedVersion: 2
-        x: 1427
-        y: 876
-        width: 295
-        height: 541
+        x: 119
+        y: 345
+        width: 177
+        height: 592
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb8cc4c9419349341944bd799e188731
-      internalID: 1994358799
+      spriteID: f5ec44edfe2e1404685ddac191eae499
+      internalID: 1863025819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juglar1
+      name: calatrava2_idle2
       rect:
         serializedVersion: 2
-        x: 114
-        y: 184
-        width: 352
-        height: 562
+        x: 506
+        y: 345
+        width: 177
+        height: 592
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ab10e31581a98c4f980f94ab8052c2b
-      internalID: 1541263626
+      spriteID: c2a4036ececb92c48b3576a96b04bee1
+      internalID: -445564482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juglar2
+      name: calatrava2_talk1
       rect:
         serializedVersion: 2
-        x: 570
-        y: 184
-        width: 352
-        height: 562
+        x: 858
+        y: 345
+        width: 243
+        height: 592
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,52 +244,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28fa38745623dba40b208d024b010bba
-      internalID: -1246710317
+      spriteID: a976b9b7a33cbfa4490b225bf77821b8
+      internalID: 1693037779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: juglar3
+      name: calatrava2_talk2
       rect:
         serializedVersion: 2
-        x: 1073
-        y: 187
-        width: 467
-        height: 562
-      alignment: 9
-      pivot: {x: 0.37704408, y: 0.5}
+        x: 1220
+        y: 345
+        width: 243
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f06738fadcf374b8e489a212bdf2f0
-      internalID: 718900948
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: juglar4
-      rect:
-        serializedVersion: 2
-        x: 1668
-        y: 177
-        width: 467
-        height: 562
-      alignment: 9
-      pivot: {x: 0.3770441, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30a47b496ecd0284683798d4300c9b37
-      internalID: 771765580
+      spriteID: 71692cd607e0d8244bea834496fa867b
+      internalID: -542018106
       vertices: []
       indices: 
       edges: []
@@ -298,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a41f0c179ccea6a42ac2627b7b32aa79
+    spriteID: 254b5160d654dee40a295f108bbbc3d1
     internalID: 0
     vertices: []
     indices: 
@@ -308,15 +286,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      arquero_idle_1: 239613700
-      arquero_idle_2: 171715846
-      arquero_idle_3: -1338015190
-      arquero_talk_1: -668882311
-      arquero_talk_2: 1994358799
-      juglar1: 1541263626
-      juglar2: -1246710317
-      juglar3: 718900948
-      juglar4: 771765580
+      calatrava2_idle1: 1863025819
+      calatrava2_idle2: -445564482
+      calatrava2_talk1: 1693037779
+      calatrava2_talk2: -542018106
+      monja_idle2: 1177357356
+      monja_idle_1: 440301402
+      monja_talk1: 955024475
+      monja_talk2: -806545994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
