@@ -1,7 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class numbergenerator : MonoBehaviour, IInteractable{
+    GameObject Jugador;
     public void Interact(){
-        Debug.Log(Random.Range(0,100));
+        SceneManager.LoadScene(2);
+        
     }
+
 }
