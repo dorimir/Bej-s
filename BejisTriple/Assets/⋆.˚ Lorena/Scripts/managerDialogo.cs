@@ -17,12 +17,13 @@ public class managerDialogo : MonoBehaviour
     private dialogoSO dialogoActual;
     private opcionDialogo opcionDialogo;
     private int indiceLineaActual = 0;
-    private bool dialogoActivo = false;
+    public bool dialogoActivo = false;
+
+
 
     void Update()
     {
-        if (dialogoActivo && Input.GetKeyDown(KeyCode.E) ||
-            dialogoActivo && Input.GetKeyDown(KeyCode.Space))
+        if (dialogoActivo && Input.GetKeyDown(KeyCode.Space))
         {
             MuestraSiguienteLinea();
         }
@@ -40,6 +41,7 @@ public class managerDialogo : MonoBehaviour
         dialogoActivo = true;
         panelDialogo.SetActive(true);
         MostrarLinea(dialogoActual.lineas[indiceLineaActual]);
+
     }
 
     void MuestraSiguienteLinea()
