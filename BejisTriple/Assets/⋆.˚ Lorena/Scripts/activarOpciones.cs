@@ -1,9 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class activarOpciones : MonoBehaviour, IPointerClickHandler
+public class activarOpciones : MonoBehaviour
 {
     public GameObject panelOpciones;
 
@@ -23,7 +23,46 @@ public class activarOpciones : MonoBehaviour, IPointerClickHandler
     public Button botonOpcionDos;
     public Button botonOpcionTres;
 
-    public void OnPointerClick(PointerEventData eventData)
+    [Header("Referencia a managerDialogo")]
+    public managerDialogo manager;
+
+    private bool jugadorDentro = false;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            jugadorDentro = true;
+            Debug.Log("Jugador ha entrado en el área de interacción.");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if ( other.CompareTag("Player"))
+        {
+            panelOpciones.SetActive(false);
+
+            jugadorDentro = false;
+            Debug.Log("Jugador ha salido del área de interacción.");
+        }
+    }
+
+    private void Update()
+    {
+        if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
+        {
+            if (manager != null && manager.dialogoActivo) 
+            {
+                Debug.Log("No se pueden mostrar opciones: diálogo activo.");
+                return;
+            }
+
+            MostrarOpciones();
+        }
+    }
+
+    public void MostrarOpciones()
     {
         Debug.Log("Clic en UI");
         panelOpciones.SetActive(true);
