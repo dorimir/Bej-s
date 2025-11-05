@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anzuelo
+  - Barbo
+  - Trucha
+  - Siluro
+  - Carpa
+  - BasuraDeRio
   layers:
   - Default
   - TransparentFX

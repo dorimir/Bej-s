@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  surface: {fileID: 1881247574}
 --- !u!54 &1455847632
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -617,8 +618,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.89017445, y: 1.9900001, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.43255258, y: 0.5041199, z: 3.3085375}
+  m_Center: {x: -0.2288109, y: -0.68389225, z: 1.5542688}
 --- !u!1 &1532588893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,6 +1036,9 @@ MonoBehaviour:
   trucha: {fileID: 6461143088219618914, guid: 74626c8bbed2ac844af980e156e629bf, type: 3}
   siluro: {fileID: 5671783585235324164, guid: 00d6002d850b4bb44bc09bb1fb1a9637, type: 3}
   barbo: {fileID: 3736001764376333169, guid: 0787fa5c4696f7b49b6c52b557a2409d, type: 3}
+  basura: {fileID: 6069686215765258259, guid: fdaf8c5b731ebe542a348a33b6b379da, type: 3}
+  bubbleParticles: {fileID: 6701371768881260538, guid: 2e1767ddae9fdce4486dcfa83eb47c0b, type: 3}
+  speed: 3
 --- !u!1 &2038121875
 GameObject:
   m_ObjectHideFlags: 0
