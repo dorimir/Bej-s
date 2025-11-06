@@ -9,6 +9,8 @@ public class Anzuelo : MonoBehaviour
     //Si llevamos un pez a la superficie, lo quitamos del anzuelo y podemos seguir pescando
     public GameObject surface;
 
+    public GameObject TimeAndScore;
+
     bool HasSomethingHooked = false;
 
     void Start()
@@ -27,6 +29,23 @@ public class Anzuelo : MonoBehaviour
     {
         if(collision.gameObject == surface)
         {
+            switch(transform.GetChild(1).gameObject.tag)
+            {
+                case "Trucha":
+                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(1);
+                    break;
+                case "Carpa":
+                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(3);
+                    break;
+                case "Siluro":
+                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(7);
+                    break;
+                case "Barbo":
+                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(12);
+                    break;
+                default:
+                        break;
+            }
             Destroy(transform.GetChild(1).gameObject);
             HasSomethingHooked = false;
         }

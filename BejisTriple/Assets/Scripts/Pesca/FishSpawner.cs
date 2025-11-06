@@ -2,11 +2,17 @@ using System;
 using System.Collections;
 using System.Numerics;
 using UnityEngine;
+using TMPro;
 
 public class FishSpawner : MonoBehaviour
 {
     public GameObject carpa, trucha, siluro, barbo, basura, bubbleParticles;
+    public TextMeshProUGUI SeAcaboText;
+
+    public GameObject anzuelo, TimeAndScore;
     public float speed = 3;
+
+    public bool IsGameOn = false;
 
     /*
     
@@ -19,8 +25,21 @@ public class FishSpawner : MonoBehaviour
     */
     void Start()
     {
+        StartGame(); //Esto luego se quitará
+    }
+
+    public void StartGame()
+    {
+        IsGameOn = true;
         StartCoroutine(SpawnFish());
         StartCoroutine(SpawnTrash());
+    }
+
+    public void EndGame()
+    {
+        IsGameOn = false;
+        anzuelo.SetActive(false);
+        SeAcaboText.gameObject.SetActive(true);
     }
 
     private IEnumerator SpawnFish()
@@ -83,7 +102,7 @@ public class FishSpawner : MonoBehaviour
         spawnedFish.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(speed * (-spawnPointX / 10), spawnedFish.GetComponent<Rigidbody>().linearVelocity.y);
 
         StartCoroutine(DeleteFish(spawnedFish, 7f));
-        StartCoroutine(SpawnFish());
+        if(IsGameOn) StartCoroutine(SpawnFish());
     }
     
     private IEnumerator SpawnBarbo(float spawnPointX, float spawnPointY)
@@ -99,7 +118,7 @@ public class FishSpawner : MonoBehaviour
         spawnedFish.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(speed * (-spawnPointX / 10), spawnedFish.GetComponent<Rigidbody>().linearVelocity.y);
 
         StartCoroutine(DeleteFish(spawnedFish, 7f));
-        StartCoroutine(SpawnFish());
+        if(IsGameOn) StartCoroutine(SpawnFish());
     }
     
     private IEnumerator SpawnTrash()
@@ -131,12 +150,12 @@ public class FishSpawner : MonoBehaviour
         spawnedTrash.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(3 * (-spawnPointX / 10), spawnedTrash.GetComponent<Rigidbody>().linearVelocity.y);
         
         StartCoroutine(DeleteFish(spawnedTrash, 7f));
-        StartCoroutine(SpawnTrash());
+        if(IsGameOn) StartCoroutine(SpawnTrash());
     }
 
     private IEnumerator DeleteFish(GameObject fish, float time)
     {
         yield return new WaitForSeconds(time);
-        Destroy(fish);
+        if(anzuelo.transform.GetChild(1).gameObject != fish) Destroy(fish);
     }
 }
