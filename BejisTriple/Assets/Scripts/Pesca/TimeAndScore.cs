@@ -5,8 +5,8 @@ public class TimeAndScore : MonoBehaviour
 {
     public TextMeshProUGUI timeText, scoreText;
 
-    int score = 0;
-    float seconds = 60.0f;
+    public int score = 0;
+    public float seconds = 60.0f;
     public GameObject fishSpawner;
     public void AddScore(int points)
     {

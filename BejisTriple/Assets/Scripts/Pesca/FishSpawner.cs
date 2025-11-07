@@ -3,11 +3,13 @@ using System.Collections;
 using System.Numerics;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FishSpawner : MonoBehaviour
 {
     public GameObject carpa, trucha, siluro, barbo, basura, bubbleParticles;
-    public TextMeshProUGUI SeAcaboText;
+    public TextMeshProUGUI SeAcaboText, RetryAndExitText;
+    public GameObject tutorial;
 
     public GameObject anzuelo, TimeAndScore;
     public float speed = 3;
@@ -23,13 +25,30 @@ public class FishSpawner : MonoBehaviour
     1/20 veces aparece un barbo dorado (5%)
     
     */
-    void Start()
+
+    void Update()
     {
-        StartGame(); //Esto luego se quitará
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartGame();
+        }
+        if(IsGameOn == false && TimeAndScore.GetComponent<TimeAndScore>().seconds <=0)
+        {
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                SceneManager.LoadScene("Fishing Minigame", LoadSceneMode.Single);
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                SceneManager.LoadScene("Fishing Minigame", LoadSceneMode.Single);
+                //En el futuro reemplazaremos esto por otra escena
+            }
+        }
     }
 
     public void StartGame()
     {
+        tutorial.SetActive(false);
         IsGameOn = true;
         StartCoroutine(SpawnFish());
         StartCoroutine(SpawnTrash());
@@ -40,6 +59,13 @@ public class FishSpawner : MonoBehaviour
         IsGameOn = false;
         anzuelo.SetActive(false);
         SeAcaboText.gameObject.SetActive(true);
+        RetryAndExitText.gameObject.SetActive(true);
+        if (TimeAndScore.GetComponent<TimeAndScore>().score >= 60)
+        {
+            SeAcaboText.text = "¡HAS GANADO!";
+            //Hacer las acciones necesarias cuando se gane
+        }
+        else  SeAcaboText.text = "¡QUÉ LÁSTIMA!";
     }
 
     private IEnumerator SpawnFish()
