@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "El barbo dorado es muy r\xE1pido y escurridizo. Si ves bubujas, \xA1es
+  m_text: "El barbo dorado es muy r\xE1pido y escurridizo. Si ves burbujas, \xA1es
     que va a salir!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1387,8 +1387,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Mueve el anzuelo con las flechas/WASD\nToca un pez para engancharlo al
-    anzuelo y ll\xE9valo hasta la superficie para pescarlo\n\xA1Obt\xE9n 60 puntos
+  m_text: "Mueve el anzuelo con las flechas/WASD\nToca un pez por la boca para engancharlo
+    al anzuelo y ll\xE9valo hasta la superficie para pescarlo\n\xA1Obt\xE9n 60 puntos
     en 60 segundos para ganar!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -292.05536, y: -52.8479, z: -522.15857, w: -150.63934}
+  m_margin: {x: -292.05536, y: -52.8479, z: -582.95776, w: -150.63934}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
