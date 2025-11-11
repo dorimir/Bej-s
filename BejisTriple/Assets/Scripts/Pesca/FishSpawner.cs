@@ -40,7 +40,7 @@ public class FishSpawner : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
-                SceneManager.LoadScene("Fishing Minigame", LoadSceneMode.Single);
+                SceneManager.LoadScene("Rio", LoadSceneMode.Single);
                 //En el futuro reemplazaremos esto por otra escena
             }
         }
