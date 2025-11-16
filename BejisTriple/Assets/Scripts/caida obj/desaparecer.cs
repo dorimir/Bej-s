@@ -18,7 +18,7 @@ public class desaparecer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Objetoscaen"))
+        if (collision.collider.CompareTag("Objetoscaen") || (collision.collider.CompareTag("Caenmalos")))
         {
             Destroy(collision.gameObject);
         }

@@ -11,6 +11,7 @@ TagManager:
   - Carpa
   - BasuraDeRio
   - Objetoscaen
+  - Caenmalos
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - Anzuelo
-  - 
+  - Objs caen
   - 
   - 
   - 
