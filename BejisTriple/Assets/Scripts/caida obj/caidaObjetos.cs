@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class caidaobjetos : MonoBehaviour
+public class caidaObjetos : MonoBehaviour
 {
     public GameObject Herradura;
     public GameObject Heces;
@@ -9,6 +9,15 @@ public class caidaobjetos : MonoBehaviour
     public GameObject espada;
 
     public GameObject player;
+
+    public GameObject Juego;
+    public GameObject pantallaVictoria;
+    public GameObject pantallaDerrota;
+
+    public GameObject Puntoserrores;
+
+
+    
 
     Vector3 pos;
     int azar;
@@ -32,7 +41,6 @@ public class caidaobjetos : MonoBehaviour
     for(int i = 0; i <= cantidad; i++)
     {
         azar = Random.Range(0,4);
-        azar=2;
         if(azar!=2) pos = new Vector3(Random.Range(-2, 12), 8, 0);
         else pos = new Vector3(player.transform.position.x, 8, 0);
         
@@ -42,7 +50,6 @@ public class caidaobjetos : MonoBehaviour
         {
             case 0:
                 Instantiate(caballo, pos, Quaternion.identity);
-
                 break;
             case 1:
                 Instantiate(Herradura, pos, Quaternion.identity);
@@ -59,9 +66,20 @@ public class caidaobjetos : MonoBehaviour
         
     }
     }
+    public void juegoacabado(){
+        Juego.SetActive(false);
+        int erroresTOTALES=Puntoserrores.GetComponent<Puntoserrores>().errorescometidos;
+        if(erroresTOTALES>=3){
+            pantallaDerrota.SetActive(true);
+        }
+        else pantallaVictoria.SetActive(true);
+    }
 
-    GameObject[] objscaen = GameObject.FindGameObjectsWithTag("Objetoscaen");
-    GameObject[] objscaenmalos = GameObject.FindGameObjectsWithTag("Caenmalos");
+    /*GameObject[] espadarest = GameObject.FindGameObjectsWithTag("espada");
+    GameObject[] hecesrest = GameObject.FindGameObjectsWithTag("heces");
+    GameObject[] ropacaballorest = GameObject.FindGameObjectsWithTag("ropacaballo");
+    GameObject[] herradurarest = GameObject.FindGameObjectsWithTag("herraduramin");
+    */
 }
 
 

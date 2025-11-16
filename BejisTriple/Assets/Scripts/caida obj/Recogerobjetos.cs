@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Recogerobjetos : MonoBehaviour
 {
+    public GameObject Puntoserrores;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,12 +15,29 @@ public class Recogerobjetos : MonoBehaviour
 
     }
     
-    private void OnCollisionEnter2D(Collision2D other) {
+    private void OnCollisionEnter2D(Collision2D collision) {
         
-        if (other.collider.CompareTag("Objetoscaen"))
+        if (collision.collider.CompareTag("ropacaballo") || collision.collider.CompareTag("herraduramin") 
+        || collision.collider.CompareTag("heces") || collision.collider.CompareTag("espada"))
         {
-            Destroy(other.gameObject);
-            Debug.Log("+1");
+            switch(collision.collider.tag){
+            case "ropacaballo":
+                Destroy(collision.gameObject);
+                break;
+            case "herraduramin":
+                Destroy(collision.gameObject);
+                break;
+            case "heces":
+                Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(1);
+                break;
+            case "espada":
+                Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(3);
+
+                break;
+            default: break;
+        }
         }
     }
 }
