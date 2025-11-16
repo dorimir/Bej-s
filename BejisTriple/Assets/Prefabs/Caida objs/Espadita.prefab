@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5101832647700238669}
   m_Layer: 8
   m_Name: Espadita
-  m_TagString: Caenmalos
+  m_TagString: espada
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
