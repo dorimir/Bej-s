@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class caidaObjetos : MonoBehaviour
 {
     public GameObject Herradura;
@@ -74,6 +75,7 @@ public class caidaObjetos : MonoBehaviour
         }
         else pantallaVictoria.SetActive(true);
     }
+    
 
     /*GameObject[] espadarest = GameObject.FindGameObjectsWithTag("espada");
     GameObject[] hecesrest = GameObject.FindGameObjectsWithTag("heces");

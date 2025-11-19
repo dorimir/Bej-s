@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class tutorial : MonoBehaviour
 {
@@ -10,5 +11,8 @@ public class tutorial : MonoBehaviour
     public void StartGame(){
         canvatutorial.SetActive(false);
         juego.SetActive(true);
+    }
+    public void restart(){
+        SceneManager.LoadScene(2);
     }
 }
