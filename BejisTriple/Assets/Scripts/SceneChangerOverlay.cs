@@ -8,4 +8,11 @@ public class SimpleSceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void configuration(){
+        SceneManager.LoadScene(13);
+        Debug.Log("Lol");
+    }
+    public void Menu(){
+        SceneManager.LoadScene(0);
+    }
 }

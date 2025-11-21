@@ -1664,8 +1664,8 @@ Transform:
   m_GameObject: {fileID: 779145731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6143184, y: 3.940979, z: 7.059587}
-  m_LocalScale: {x: 1.4110818, y: 0.9431667, z: 1.0711833}
+  m_LocalPosition: {x: 4.7, y: 3.9973, z: 7.059587}
+  m_LocalScale: {x: 1.3938596, y: 0.95881945, z: 1.0711833}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2362,7 +2362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -349, y: 173}
+  m_AnchoredPosition: {x: -464.3, y: 257.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1010001521
@@ -2475,7 +2475,7 @@ GameObject:
   - component: {fileID: 1084745419}
   - component: {fileID: 1084745420}
   m_Layer: 0
-  m_Name: errores_0
+  m_Name: errores_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2490,8 +2490,8 @@ Transform:
   m_GameObject: {fileID: 1084745418}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 288.56644, y: 218.92593, z: 0}
-  m_LocalScale: {x: 7.7955823, y: 7.7955823, z: 1.2992637}
+  m_LocalPosition: {x: -570.67, y: -291.19, z: 0}
+  m_LocalScale: {x: 0.13394052, y: 0.13394052, z: 0.02232342}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2040156925}
@@ -3089,7 +3089,7 @@ GameObject:
   - component: {fileID: 1410692940}
   - component: {fileID: 1410692939}
   m_Layer: 0
-  m_Name: errores_1
+  m_Name: errores_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3159,8 +3159,8 @@ Transform:
   m_GameObject: {fileID: 1410692938}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264.1403, y: 218.92593, z: 0}
-  m_LocalScale: {x: 7.7955823, y: 7.7955823, z: 1.2992637}
+  m_LocalPosition: {x: -571.0895, y: -291.19003, z: 0}
+  m_LocalScale: {x: 0.13394052, y: 0.13394052, z: 0.02232342}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2040156925}
@@ -3547,7 +3547,7 @@ MonoBehaviour:
   pantallaVictoria: {fileID: 1688011787}
   pantallaDerrota: {fileID: 1160667466}
   Puntoserrores: {fileID: 2145908355}
-  cantidad: 10
+  cantidad: 20
   rangoX: {x: -5, y: 5}
 --- !u!1 &1601671033
 GameObject:
@@ -4235,7 +4235,7 @@ GameObject:
   - component: {fileID: 1943742314}
   - component: {fileID: 1943742313}
   m_Layer: 0
-  m_Name: errores_2
+  m_Name: errores_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4305,8 +4305,8 @@ Transform:
   m_GameObject: {fileID: 1943742312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 238.41489, y: 218.92593, z: 0}
-  m_LocalScale: {x: 7.7955823, y: 7.7955823, z: 1.2992637}
+  m_LocalPosition: {x: -571.5313, y: -291.19003, z: 0}
+  m_LocalScale: {x: 0.13394052, y: 0.13394052, z: 0.02232342}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2040156925}
@@ -5252,8 +5252,8 @@ MonoBehaviour:
   caidaObjetos: {fileID: 1513953365}
   Puntos: {fileID: 1010001521}
   errorescometidos: 0
-  e1: {fileID: 0}
-  e2: {fileID: 0}
+  e1: {fileID: 1943742312}
+  e2: {fileID: 1410692938}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

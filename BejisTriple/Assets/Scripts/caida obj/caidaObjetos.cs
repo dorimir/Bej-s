@@ -22,6 +22,7 @@ public class caidaObjetos : MonoBehaviour
 
     Vector3 pos;
     int azar;
+    private GameObject obj;
 
     public int cantidad = 10;
     int delay = 3;
@@ -39,33 +40,36 @@ public class caidaObjetos : MonoBehaviour
     }
 
     IEnumerator spawnerobj(){
-    for(int i = 0; i <= cantidad; i++)
-    {
-        azar = Random.Range(0,4);
-        if(azar!=2) pos = new Vector3(Random.Range(-2, 12), 8, 0);
-        else pos = new Vector3(player.transform.position.x, 8, 0);
         
-        
-        
-        switch (azar)
+        for(int i = 0; i <= cantidad; i++)
         {
-            case 0:
-                Instantiate(caballo, pos, Quaternion.identity);
-                break;
-            case 1:
-                Instantiate(Herradura, pos, Quaternion.identity);
-                break;
-            case 2:
-                Instantiate(espada, pos, Quaternion.Euler(0, 0, 176));
-                break;
-            case 3:
-                Instantiate(Heces, pos, Quaternion.identity);
-                break;
-            default: break;
+            azar = Random.Range(0,4);
+            if(azar!=2) pos = new Vector3(Random.Range(-2, 12), 8, 0);
+            else pos = new Vector3(player.transform.position.x, 8, 0);
+            
+            
+            
+            switch (azar)
+            {
+                case 0:
+                    obj=Instantiate(caballo, pos, Quaternion.identity);
+                    break;
+                case 1:
+                    obj=Instantiate(Herradura, pos, Quaternion.identity);
+                    break;
+                case 2:
+                    obj=Instantiate(espada, pos, Quaternion.Euler(0, 0, 176));
+                    break;
+                case 3:
+                    obj=Instantiate(Heces, pos, Quaternion.identity);
+                    break;
+                default: break;
+            }
+            yield return new WaitForSeconds(delay);
+            
         }
-        yield return new WaitForSeconds(delay);
+        while (obj != null) yield return null;
         
-    }
     }
     public void juegoacabado(){
         Juego.SetActive(false);
