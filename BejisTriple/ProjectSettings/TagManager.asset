@@ -10,6 +10,12 @@ TagManager:
   - Siluro
   - Carpa
   - BasuraDeRio
+  - espada
+  - ropacaballo
+  - heces
+  - herraduramin
+  - Objetoscaen
+  - Caenmalos
   layers:
   - Default
   - TransparentFX
@@ -19,7 +25,7 @@ TagManager:
   - UI
   - 
   - Anzuelo
-  - 
+  - Objs caen
   - 
   - 
   - 
