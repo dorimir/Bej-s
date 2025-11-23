@@ -76,7 +76,7 @@ public class IntroCutscene : MonoBehaviour
                         StartCoroutine(ChangeStage());
                     break;
                 default:
-                SceneManager.LoadScene("Intro_Cutscene", LoadSceneMode.Single);
+                SceneManager.LoadScene("SalaMayor", LoadSceneMode.Single);
                 //Lo cambiaremos despues
                         break;
             }
