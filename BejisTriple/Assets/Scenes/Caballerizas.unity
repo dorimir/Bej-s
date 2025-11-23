@@ -12862,6 +12862,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 780171924090268118, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
+      propertyPath: SceneName
+      value: Herreria
+      objectReference: {fileID: 0}
     - target: {fileID: 1225704952150439911, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: m_Name
       value: SceneDoor
