@@ -40,11 +40,11 @@ public class caidaObjetos : MonoBehaviour
     }
 
     IEnumerator spawnerobj(){
-        
+        yield return new WaitForSeconds(delay-1);
         for(int i = 0; i <= cantidad; i++)
         {
             azar = Random.Range(0,4);
-            if(azar!=2) pos = new Vector3(Random.Range(-2, 12), 8, 0);
+            if(azar!=2) pos = new Vector3(Random.Range(-2, 10), 8, 0);
             else pos = new Vector3(player.transform.position.x, 8, 0);
             
             
@@ -79,13 +79,6 @@ public class caidaObjetos : MonoBehaviour
         }
         else pantallaVictoria.SetActive(true);
     }
-    
-
-    /*GameObject[] espadarest = GameObject.FindGameObjectsWithTag("espada");
-    GameObject[] hecesrest = GameObject.FindGameObjectsWithTag("heces");
-    GameObject[] ropacaballorest = GameObject.FindGameObjectsWithTag("ropacaballo");
-    GameObject[] herradurarest = GameObject.FindGameObjectsWithTag("herraduramin");
-    */
 }
 
 

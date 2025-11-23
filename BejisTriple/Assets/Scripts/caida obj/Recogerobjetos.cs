@@ -23,9 +23,11 @@ public class Recogerobjetos : MonoBehaviour
             switch(collision.collider.tag){
             case "ropacaballo":
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().ptos(100);
                 break;
             case "herraduramin":
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().ptos(200);
                 break;
             case "heces":
                 Destroy(collision.gameObject);

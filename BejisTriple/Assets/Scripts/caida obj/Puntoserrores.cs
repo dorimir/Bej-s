@@ -11,6 +11,7 @@ public class Puntoserrores : MonoBehaviour
     private Animator animator;
     //public Sprite spriteerrores;
     public int errorescometidos;
+    public int putosobt;
     public GameObject e1;
     public GameObject e2;
 
@@ -18,11 +19,15 @@ public class Puntoserrores : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void errores(int error){
         errorescometidos+=error;
-        Puntos.text = "Puntos: " + errorescometidos;
         if(errorescometidos==1) e1.SetActive(true);
         else if(errorescometidos==2) e2.SetActive(true); 
         
 
+    }
+
+    public void ptos(int puntos){
+        putosobt+=puntos;
+        Puntos.text = "Puntos: " + putosobt;
     }
 
     // Update is called once per frame

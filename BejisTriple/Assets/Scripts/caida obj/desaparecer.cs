@@ -35,30 +35,4 @@ public class desaparecer : MonoBehaviour
     }
 }
 
-/*void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject == surface)
-        {
-            switch(transform.GetChild(1).gameObject.tag)
-            {
-                case "Trucha":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(1);
-                    break;
-                case "Carpa":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(3);
-                    break;
-                case "Siluro":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(7);
-                    break;
-                case "Barbo":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(12);
-                    break;
-                default:
-                        break;
-            }
-            Destroy(transform.GetChild(1).gameObject);
-            HasSomethingHooked = false;
-        }
-    }
-*/
 
