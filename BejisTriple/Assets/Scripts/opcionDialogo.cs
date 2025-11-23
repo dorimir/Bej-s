@@ -20,11 +20,12 @@ public class opcionDialogo : MonoBehaviour
 
     public void activarDIalogo()
     {
-        //Debug.Log("Clic en UI para iniciar diálogo");
+        //Debug.Log("Clic en UI para iniciar diï¿½logo");
         managerDialogo manager = FindObjectOfType<managerDialogo>();
         if (manager != null)
         {
+            Debug.Log("El manager dialogo no es null");
             manager.IniciarDialogo(dialogo);
-        }
+        } else Debug.Log("El manager dialogo es null, no se puede abrir");
     }
 }
