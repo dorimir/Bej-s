@@ -41,7 +41,6 @@ public class FishSpawner : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 SceneManager.LoadScene("Rio", LoadSceneMode.Single);
-                //En el futuro reemplazaremos esto por otra escena
             }
         }
     }
