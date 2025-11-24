@@ -6,7 +6,7 @@ public class SimpleSceneChanger : MonoBehaviour
     // Must be public, void, no parameters
     public void Continue()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Intro_Cutscene");
     }
     public void configuration(){
         SceneManager.LoadScene(13);
