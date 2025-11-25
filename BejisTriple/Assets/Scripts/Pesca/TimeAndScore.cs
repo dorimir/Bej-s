@@ -4,6 +4,7 @@ using TMPro;
 public class TimeAndScore : MonoBehaviour
 {
     public TextMeshProUGUI timeText, scoreText;
+    bool terminado = false;
 
     public int score = 0;
     public float seconds = 60.0f;
@@ -21,8 +22,9 @@ public class TimeAndScore : MonoBehaviour
             seconds -= Time.deltaTime;
             timeText.text = "Tiempo: " + Mathf.FloorToInt(seconds % 60);
         }
-        if (seconds <= 0)
+        if (seconds <= 0 && !terminado)
         {
+            bool terminado = true;
             fishSpawner.GetComponent<FishSpawner>().EndGame();
             timeText.text = "¡Fin!";
         } 

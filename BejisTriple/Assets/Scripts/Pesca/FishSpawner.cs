@@ -63,6 +63,7 @@ public class FishSpawner : MonoBehaviour
         {
             SeAcaboText.text = "¡HAS GANADO!";
             //Hacer las acciones necesarias cuando se gane
+            GameManager.Instance.minijuegoCompletado(2);
         }
         else  SeAcaboText.text = "¡QUÉ LÁSTIMA!";
     }
