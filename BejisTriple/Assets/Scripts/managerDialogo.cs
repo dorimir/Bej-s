@@ -4,6 +4,8 @@ using TMPro;
 
 public class managerDialogo : MonoBehaviour
 {
+
+    //Este archivo es el que lleva el manager de dialogos, hay uno en cada escena
     [Header("Referencias UI")]
     public GameObject panelDialogo;
     public TextMeshProUGUI nombreTexto;
@@ -11,7 +13,7 @@ public class managerDialogo : MonoBehaviour
     public Image imagenPJ;
     public GameObject panelOpciones;
 
-    [Header("Bloqueo de interacción")]
+    [Header("Bloqueo de interacciï¿½n")]
     public GameObject bloqueadorInput;
 
     private dialogoSO dialogoActual;

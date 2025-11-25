@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class activarOpciones : MonoBehaviour
 {
+    //Este archivo lo tiene cada NPC por su cuenta
     public GameObject panelOpciones;
 
     [Header("Referencias dialogoSO")]
@@ -26,9 +27,9 @@ public class activarOpciones : MonoBehaviour
     [Header("Referencia a managerDialogo")]
     public managerDialogo manager;
 
-    private bool jugadorDentro = false;
+    protected bool jugadorDentro = false;
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -37,7 +38,7 @@ public class activarOpciones : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if ( other.CompareTag("Player"))
         {
@@ -48,7 +49,7 @@ public class activarOpciones : MonoBehaviour
         }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
         {
