@@ -81,4 +81,8 @@ public class IntroCutscene : MonoBehaviour
                         break;
             }
     }
+
+    public void saltarCinem(){
+        SceneManager.LoadScene("SalaMayor", LoadSceneMode.Single);
+    }
 }

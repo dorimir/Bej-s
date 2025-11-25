@@ -1,14 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneDoor : MonoBehaviour
+public class SceneDoor : MonoBehaviour, IInteractable
 {
     public string SceneName;
-    void OnTriggerEnter(Collider collision)
+    public void Interact()
     {
-        if(collision.tag == "Player") //Esto lo cambiaremos cuando estén impl
-        {
-            SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
-        }
+        SceneManager.LoadScene(SceneName, LoadSceneMode.Single);
     }
 }

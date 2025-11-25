@@ -20,7 +20,7 @@ public class interactor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) ){
+        if(Input.GetKeyDown(KeyCode.Space) ){
             Collider[] hits = Physics.OverlapSphere(InteractorSource.position, InteractRange);
             foreach (var hit in hits)
             {
