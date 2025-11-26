@@ -19,7 +19,7 @@ public class opcionDialogo : MonoBehaviour
     }
 
 
-    public void activarDIalogo()
+    public virtual void activarDIalogo()
     {
         //Debug.Log("Clic en UI para iniciar di�logo");
         managerDialogo manager = FindObjectOfType<managerDialogo>();

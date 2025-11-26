@@ -63,7 +63,7 @@ public class activarOpciones : MonoBehaviour
         }
     }
 
-    public void MostrarOpciones()
+    public virtual void MostrarOpciones()
     {
         Debug.Log("Clic en UI");
         panelOpciones.SetActive(true);

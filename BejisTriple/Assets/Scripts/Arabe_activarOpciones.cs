@@ -5,18 +5,43 @@ using UnityEngine.EventSystems;
 
 public class Arabe_activarOpciones : activarOpciones
 {
+    public Button botonIniciarMinijuego;
+    bool haEmpezadoDialogo = false;
     protected override void Update()
     {
         if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
         {
-            if (manager != null && manager.dialogoActivo) 
+            if(manager!= null)
             {
-                Debug.Log("No se pueden mostrar opciones: diálogo activo.");
-                return;
+                if (!manager.dialogoActivo) 
+                {
+                    if(!haEmpezadoDialogo)
+                    {
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                    }else MostrarOpciones();
+                }
             }
-
-            MostrarOpciones();
         }
+    }
+    public override void MostrarOpciones()
+    {
+        Debug.Log("Clic en UI");
+        panelOpciones.SetActive(true);
+        botonOpcionUno.gameObject.SetActive(false);
+
+        nombreOpcionUno.text = opcionUno.nombreOpcion;
+        nombreOpcionDos.text = opcionDos.nombreOpcion;
+        nombreOpcionTres.text = opcionTres.nombreOpcion;
+
+        var opcionScriptUno = botonOpcionUno.GetComponent<opcionDialogo>();
+        opcionScriptUno.dialogo = opcionUno;
+
+        var opcionScriptDos = botonOpcionDos.GetComponent<opcionDialogo>();
+        opcionScriptDos.dialogo = opcionDos;
+
+        var opcionScriptTres = botonOpcionTres.GetComponent<opcionDialogo>();
+        opcionScriptTres.dialogo = opcionTres;
     }
 
 }

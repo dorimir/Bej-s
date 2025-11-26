@@ -15,7 +15,11 @@ MonoBehaviour:
   nombrePJ: Arabe
   nombreOpcion: "\xBFComo estas?"
   lineas:
-  - textoDialogo: Bien.
+  - textoDialogo: "La ca\xF1a est\xE1 lista."
     expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
-  - textoDialogo: Me duele la panza.
+  - textoDialogo: "La ca\xF1a est\xE1 lista."
+    expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
+  - textoDialogo: "\xBFQuieres pescar?"
+    expresionPJ: {fileID: 21300000, guid: 045d51d358da40740891a549e1e64f4e, type: 3}
+  - textoDialogo: O no, si no quieres.
     expresionPJ: {fileID: 21300000, guid: debae1d85384c4b4fba040a9738ad0d6, type: 3}
