@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6669499157366221893}
   - component: {fileID: 2219592020522891197}
   - component: {fileID: 7150321286349092341}
-  - component: {fileID: 2046551642251981006}
+  - component: {fileID: 5571782877386329400}
   m_Layer: 0
   m_Name: Arabe
   m_TagString: Untagged
@@ -185,7 +185,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &2046551642251981006
+--- !u!114 &5571782877386329400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4767669452184680770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e31ff2da27fa70438fd3373cc70d731, type: 3}
+  m_Script: {fileID: 11500000, guid: a9b679ba018cd9740b893e67cda0cdc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panelOpciones: {fileID: 0}
@@ -208,3 +208,4 @@ MonoBehaviour:
   botonOpcionDos: {fileID: 0}
   botonOpcionTres: {fileID: 0}
   manager: {fileID: 0}
+  botonIniciarMinijuego: {fileID: 0}
