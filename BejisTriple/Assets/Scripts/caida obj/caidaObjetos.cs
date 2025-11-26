@@ -77,7 +77,10 @@ public class caidaObjetos : MonoBehaviour
         if(erroresTOTALES>=3){
             pantallaDerrota.SetActive(true);
         }
-        else pantallaVictoria.SetActive(true);
+        else {
+            pantallaVictoria.SetActive(true);
+            GameManager.Instance.minijuegoCompletado(1);
+        }
     }
 }
 
