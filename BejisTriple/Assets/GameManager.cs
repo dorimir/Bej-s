@@ -62,4 +62,9 @@ public class GameManager : MonoBehaviour
         //También se podría hacer contadorMinijuegos++, pero de esta forma nos aseguramos de que no se incrementaría el contador
         //si se llegara a repetir un minijuego
     }
+
+    public int ContadorDeMinijuegos()
+    {
+        return contadorMinijuegos;
+    }
 }
