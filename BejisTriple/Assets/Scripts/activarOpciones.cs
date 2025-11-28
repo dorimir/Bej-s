@@ -9,6 +9,7 @@ public class activarOpciones : MonoBehaviour
     public GameObject panelOpciones;
 
     [Header("Referencias dialogoSO")]
+    public dialogoSO var0, var1, var2, var3, var4;
     public dialogoSO opcionUno;
     public dialogoSO opcionDos;
     public dialogoSO opcionTres;
@@ -23,11 +24,19 @@ public class activarOpciones : MonoBehaviour
     public Button botonOpcionUno;
     public Button botonOpcionDos;
     public Button botonOpcionTres;
+    public Button botonIniciarMinijuego;
 
     [Header("Referencia a managerDialogo")]
     public managerDialogo manager;
 
     protected bool jugadorDentro = false;
+    
+
+    [Header("Otras variables")]
+    public int variableConOpciones;
+    public bool tieneMinijuego = false;
+    public string minijuego;
+    protected bool haEmpezadoDialogo = false;
 
     protected void OnTriggerEnter(Collider other)
     {
@@ -51,7 +60,7 @@ public class activarOpciones : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
+        /*if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
         {
             if (manager != null && manager.dialogoActivo) 
             {
@@ -60,6 +69,51 @@ public class activarOpciones : MonoBehaviour
             }
 
             MostrarOpciones();
+        }*/
+        /*
+        if (!manager.dialogoActivo) 
+                {
+                    if(!haEmpezadoDialogo)
+                    {
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                    }else MostrarOpciones();
+                }
+        */
+        if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
+        {
+            if(manager!= null && !manager.dialogoActivo)
+            {
+                if(!haEmpezadoDialogo)
+                {
+                    switch(GameManager.Instance.ContadorDeMinijuegos()) 
+                    {
+                    case 1:
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                        break;
+                    case 2:
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                        break;
+                    case 3:
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                        break;
+                    case 4:
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                        break;
+                    default:
+                        manager.IniciarDialogo(opcionUno);
+                        haEmpezadoDialogo = true;
+                        break;
+                    }
+                }else if(GameManager.Instance.ContadorDeMinijuegos()== variableConOpciones)
+                {
+                    MostrarOpciones();
+                }
+            }
         }
     }
 
@@ -67,6 +121,7 @@ public class activarOpciones : MonoBehaviour
     {
         Debug.Log("Clic en UI");
         panelOpciones.SetActive(true);
+        //botonOpcionUno.gameObject.SetActive(false);
 
         nombreOpcionUno.text = opcionUno.nombreOpcion;
         nombreOpcionDos.text = opcionDos.nombreOpcion;

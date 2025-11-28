@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6669499157366221893}
   - component: {fileID: 2219592020522891197}
   - component: {fileID: 7150321286349092341}
-  - component: {fileID: 5571782877386329400}
+  - component: {fileID: 3958453905576027567}
   m_Layer: 0
   m_Name: Arabe
   m_TagString: Untagged
@@ -185,7 +185,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &5571782877386329400
+--- !u!114 &3958453905576027567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,10 +194,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4767669452184680770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b679ba018cd9740b893e67cda0cdc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e31ff2da27fa70438fd3373cc70d731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panelOpciones: {fileID: 0}
+  var0: {fileID: 11400000, guid: 85b568e5031502d4290a2c2985206c50, type: 2}
+  var1: {fileID: 11400000, guid: 3b92cd80f8d4f44479961de985611b00, type: 2}
+  var2: {fileID: 11400000, guid: ca7d70e828d7f7b4296c1bba3809f22f, type: 2}
+  var3: {fileID: 11400000, guid: 1c7f22ded4c57c44a9d11f90f494c7f2, type: 2}
+  var4: {fileID: 11400000, guid: 1c7f22ded4c57c44a9d11f90f494c7f2, type: 2}
   opcionUno: {fileID: 11400000, guid: f22b18342f22764488d7c69db9e7d09c, type: 2}
   opcionDos: {fileID: 11400000, guid: 70484ea03150cfb44bc565f86285ff65, type: 2}
   opcionTres: {fileID: 11400000, guid: 13dd0ec265f939e449e4f0652097f461, type: 2}
@@ -207,5 +212,8 @@ MonoBehaviour:
   botonOpcionUno: {fileID: 0}
   botonOpcionDos: {fileID: 0}
   botonOpcionTres: {fileID: 0}
-  manager: {fileID: 0}
   botonIniciarMinijuego: {fileID: 0}
+  manager: {fileID: 0}
+  variableConOpciones: 1
+  tieneMinijuego: 1
+  minijuego: Fishing Minigame

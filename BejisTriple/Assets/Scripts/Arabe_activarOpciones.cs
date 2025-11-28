@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class Arabe_activarOpciones : activarOpciones
 {
-    public Button botonIniciarMinijuego;
-    bool haEmpezadoDialogo = false;
     protected override void Update()
     {
         if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))

@@ -25914,6 +25914,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3051486831069748218, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1846946787}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: panelOpciones
+      value: 
+      objectReference: {fileID: 1441902672}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: botonOpcionDos
+      value: 
+      objectReference: {fileID: 1441902676}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: botonOpcionUno
+      value: 
+      objectReference: {fileID: 1441902678}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: botonOpcionTres
+      value: 
+      objectReference: {fileID: 1441902674}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: nombreOpcionDos
+      value: 
+      objectReference: {fileID: 1441902675}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: nombreOpcionUno
+      value: 
+      objectReference: {fileID: 1441902677}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: nombreOpcionTres
+      value: 
+      objectReference: {fileID: 1441902673}
+    - target: {fileID: 3958453905576027567, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
+      propertyPath: botonIniciarMinijuego
+      value: 
+      objectReference: {fileID: 5510951284843010101}
     - target: {fileID: 4767669452184680770, guid: cd92b46a620b92b4fbda68fc3277721f, type: 3}
       propertyPath: m_Name
       value: Arabe

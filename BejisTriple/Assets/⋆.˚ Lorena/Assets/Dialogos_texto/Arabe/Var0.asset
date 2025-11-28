@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
-  m_Name: Opcion_2
+  m_Name: Var0
   m_EditorClassIdentifier: 
   nombrePJ: Arabe
-  nombreOpcion: NO
+  nombreOpcion: Var0
   lineas:
-  - textoDialogo: "Estar\xE9 aqu\xED si me necesitas."
-    expresionPJ: {fileID: 21300000, guid: debae1d85384c4b4fba040a9738ad0d6, type: 3}
-  - textoDialogo: "Estar\xE9 aqu\xED si me necesitas."
+  - textoDialogo: "Me escondo aqu\xED para no llamar tanto la atenci\xF3n."
+    expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
+  - textoDialogo: "Me escondo aqu\xED para no llamar tanto la atenci\xF3n."
+    expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
+  - textoDialogo: Tal vez no la pase tan mal si digo que soy cristiano.
     expresionPJ: {fileID: 21300000, guid: debae1d85384c4b4fba040a9738ad0d6, type: 3}

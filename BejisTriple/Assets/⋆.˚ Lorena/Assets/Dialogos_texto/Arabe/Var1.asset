@@ -10,12 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
-  m_Name: Opcion_2
+  m_Name: Var1
   m_EditorClassIdentifier: 
   nombrePJ: Arabe
-  nombreOpcion: NO
+  nombreOpcion: Var1
   lineas:
-  - textoDialogo: "Estar\xE9 aqu\xED si me necesitas."
+  - textoDialogo: "\xBFTienes hambre? "
+    expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
+  - textoDialogo: "\xBFTienes hambre? "
+    expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
+  - textoDialogo: "En el r\xEDo hay peces y la ca\xF1a est\xE1 lista."
     expresionPJ: {fileID: 21300000, guid: debae1d85384c4b4fba040a9738ad0d6, type: 3}
-  - textoDialogo: "Estar\xE9 aqu\xED si me necesitas."
-    expresionPJ: {fileID: 21300000, guid: debae1d85384c4b4fba040a9738ad0d6, type: 3}
+  - textoDialogo: "\xBFQuieres pescar?"
+    expresionPJ: {fileID: 21300000, guid: 045d51d358da40740891a549e1e64f4e, type: 3}
