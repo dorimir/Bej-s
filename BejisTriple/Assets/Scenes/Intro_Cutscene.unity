@@ -407,19 +407,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 163125570}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1005789968}
-        m_TargetAssemblyTypeName: IntroCutscene, Assembly-CSharp
-        m_MethodName: saltarCinem
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &163125570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,6 +2191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1237503518}
     m_Modifications:
+    - target: {fileID: 643870513927756199, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
+      propertyPath: nextSceneName
+      value: SalaMayor
+      objectReference: {fileID: 0}
     - target: {fileID: 643870513927756199, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: nextSceneIndex
       value: 1
