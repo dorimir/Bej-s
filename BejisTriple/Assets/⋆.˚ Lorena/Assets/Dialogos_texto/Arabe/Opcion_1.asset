@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Opcion_1
   m_EditorClassIdentifier: 
   nombrePJ: Arabe
-  nombreOpcion: "\xBFComo estas?"
+  nombreOpcion: SI
   lineas:
   - textoDialogo: "La ca\xF1a est\xE1 lista."
     expresionPJ: {fileID: 21300000, guid: 58aeda95aa94fa84abd80b8906d9978a, type: 3}
