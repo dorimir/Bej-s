@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Opcion_2
   m_EditorClassIdentifier: 
   nombrePJ: Herrero
-  nombreOpcion: "\xBFEs dificil el trabajo?"
+  nombreOpcion: NO
   lineas:
-  - textoDialogo: Nah.
+  - textoDialogo: "\xBFY por qu\xE9 has venido si no? "
+    expresionPJ: {fileID: 21300000, guid: f29c3341713170c4abe1d9a33eb6dcd2, type: 3}
+  - textoDialogo: "\xBFY por qu\xE9 has venido si no? "
+    expresionPJ: {fileID: 21300000, guid: f29c3341713170c4abe1d9a33eb6dcd2, type: 3}
+  - textoDialogo: No veo que vengas a regalarme un caballo de oro.
     expresionPJ: {fileID: 21300000, guid: ca9d1472634e4864d8742a8602c63828, type: 3}
-  - textoDialogo: "\xA1Me la paso en grande!"
-    expresionPJ: {fileID: 21300000, guid: 981dc7d2940a72b488de7f14d2a4c814, type: 3}

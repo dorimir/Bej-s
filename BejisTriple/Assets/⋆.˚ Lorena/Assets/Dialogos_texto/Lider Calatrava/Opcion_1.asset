@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Opcion_1
   m_EditorClassIdentifier: 
   nombrePJ: Lider Calatrava
-  nombreOpcion: "\xBFQue pasa aqui?"
+  nombreOpcion: "VENGAN A M\xCD"
   lineas:
   - textoDialogo: Es una partida de D&D
     expresionPJ: {fileID: 21300000, guid: 6411b1fea1f376c43bd741b2efe6854b, type: 3}

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
-  m_Name: Opcion_2
+  m_Name: Var0
   m_EditorClassIdentifier: 
-  nombrePJ: Lider Calatrava
+  nombrePJ: Arquero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "Av\xEDsame cuando est\xE9s listo."
-    expresionPJ: {fileID: 21300000, guid: a623c5cf99b57084aaf30d746238f50a, type: 3}
-  - textoDialogo: "Av\xEDsame cuando est\xE9s listo."
-    expresionPJ: {fileID: 21300000, guid: a623c5cf99b57084aaf30d746238f50a, type: 3}
+  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}

@@ -36,14 +36,13 @@ public class activarOpciones : MonoBehaviour
     public int variableConOpciones;
     public bool tieneMinijuego = false;
     public string minijuego;
-    protected bool haEmpezadoDialogo = false;
+    public bool haEmpezadoDialogo = false;
 
     protected void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             jugadorDentro = true;
-            Debug.Log("Jugador ha entrado en el área de interacción.");
         }
     }
 
@@ -54,13 +53,13 @@ public class activarOpciones : MonoBehaviour
             panelOpciones.SetActive(false);
 
             jugadorDentro = false;
-            Debug.Log("Jugador ha salido del área de interacción.");
         }
     }
 
     protected virtual void Update()
     {
-        /*if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
+        /*La funcion que habia en el activar opciones original de Lorena
+        if (jugadorDentro && Input.GetKeyDown(KeyCode.Space))
         {
             if (manager != null && manager.dialogoActivo) 
             {
@@ -71,6 +70,7 @@ public class activarOpciones : MonoBehaviour
             MostrarOpciones();
         }*/
         /*
+        Una funcion que añadio Fer mas tarde pero que se mejoró a la que hay abajo
         if (!manager.dialogoActivo) 
                 {
                     if(!haEmpezadoDialogo)
@@ -84,34 +84,29 @@ public class activarOpciones : MonoBehaviour
         {
             if(manager!= null && !manager.dialogoActivo)
             {
+                manager.npcActual = gameObject;
+                Debug.Log("El npc actual es " + manager.npcActual);
                 if(!haEmpezadoDialogo)
                 {
+                    haEmpezadoDialogo = true;
                     switch(GameManager.Instance.ContadorDeMinijuegos()) 
                     {
                     case 1:
-                        manager.IniciarDialogo(opcionUno);
-                        haEmpezadoDialogo = true;
+                        manager.IniciarDialogo(var1);
                         break;
                     case 2:
-                        manager.IniciarDialogo(opcionUno);
-                        haEmpezadoDialogo = true;
+                        manager.IniciarDialogo(var2);
                         break;
                     case 3:
-                        manager.IniciarDialogo(opcionUno);
-                        haEmpezadoDialogo = true;
+                        manager.IniciarDialogo(var3);
                         break;
                     case 4:
-                        manager.IniciarDialogo(opcionUno);
-                        haEmpezadoDialogo = true;
+                        manager.IniciarDialogo(var4);
                         break;
                     default:
-                        manager.IniciarDialogo(opcionUno);
-                        haEmpezadoDialogo = true;
+                        manager.IniciarDialogo(var0);
                         break;
                     }
-                }else if(GameManager.Instance.ContadorDeMinijuegos()== variableConOpciones)
-                {
-                    MostrarOpciones();
                 }
             }
         }
@@ -121,11 +116,15 @@ public class activarOpciones : MonoBehaviour
     {
         Debug.Log("Clic en UI");
         panelOpciones.SetActive(true);
-        //botonOpcionUno.gameObject.SetActive(false);
-
+        if(tieneMinijuego)
+        {
+            botonOpcionUno.gameObject.SetActive(false);
+        }else
+        {
+            botonIniciarMinijuego.gameObject.SetActive(false);
+        }
         nombreOpcionUno.text = opcionUno.nombreOpcion;
         nombreOpcionDos.text = opcionDos.nombreOpcion;
-        nombreOpcionTres.text = opcionTres.nombreOpcion;
 
         var opcionScriptUno = botonOpcionUno.GetComponent<opcionDialogo>();
         opcionScriptUno.dialogo = opcionUno;
@@ -133,8 +132,16 @@ public class activarOpciones : MonoBehaviour
         var opcionScriptDos = botonOpcionDos.GetComponent<opcionDialogo>();
         opcionScriptDos.dialogo = opcionDos;
 
-        var opcionScriptTres = botonOpcionTres.GetComponent<opcionDialogo>();
-        opcionScriptTres.dialogo = opcionTres;
+        if(opcionTres==null)
+        {
+            botonOpcionTres.gameObject.SetActive(false);
+        }
+        else
+        {
+            nombreOpcionTres.text = opcionTres.nombreOpcion;
+            var opcionScriptTres = botonOpcionTres.GetComponent<opcionDialogo>();
+            opcionScriptTres.dialogo = opcionTres;
+        }
     }
 
 }

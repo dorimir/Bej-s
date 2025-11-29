@@ -12,12 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
   m_Name: Opcion_1
   m_EditorClassIdentifier: 
-  nombrePJ: Herrero
+  nombrePJ: Arquero
   nombreOpcion: "S\xCD"
   lineas:
   - textoDialogo: Soy el herrero.
-    expresionPJ: {fileID: 21300000, guid: f29c3341713170c4abe1d9a33eb6dcd2, type: 3}
-  - textoDialogo: Hago herraduras.
-    expresionPJ: {fileID: 21300000, guid: ca9d1472634e4864d8742a8602c63828, type: 3}
-  - textoDialogo: Tambien preparo kebabs.
-    expresionPJ: {fileID: 21300000, guid: f29c3341713170c4abe1d9a33eb6dcd2, type: 3}
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}

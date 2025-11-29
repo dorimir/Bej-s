@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
+  m_Name: Var4
+  m_EditorClassIdentifier: 
+  nombrePJ: Caballero Grande
+  nombreOpcion: Chiste
+  lineas:
+  - textoDialogo: "\xA1Liliputiense haber impresionado a m\xED!"
+    expresionPJ: {fileID: 21300000, guid: ad9019955dbf7244e8ec851df1373616, type: 3}
+  - textoDialogo: "\xA1Liliputiense haber impresionado a m\xED!"
+    expresionPJ: {fileID: 21300000, guid: ad9019955dbf7244e8ec851df1373616, type: 3}
+  - textoDialogo: "\xBFC\xF3mo hacerlo?"
+    expresionPJ: {fileID: 21300000, guid: 6d22dae4b83814e4981c5614f523fb95, type: 3}
+  - textoDialogo: "Ahora sentir pena\u2026"
+    expresionPJ: {fileID: 21300000, guid: 7e7a9ca9c9d5d8d408148b1960e6e273, type: 3}
