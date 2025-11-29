@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
   m_Name: Opcion_2
   m_EditorClassIdentifier: 
-  nombrePJ: Lider Calatrava
+  nombrePJ: Establero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "Av\xEDsame cuando est\xE9s listo."
-    expresionPJ: {fileID: 21300000, guid: a623c5cf99b57084aaf30d746238f50a, type: 3}
-  - textoDialogo: "Av\xEDsame cuando est\xE9s listo."
-    expresionPJ: {fileID: 21300000, guid: a623c5cf99b57084aaf30d746238f50a, type: 3}
+  - textoDialogo: Vaya...
+    expresionPJ: {fileID: 21300000, guid: 3f0890d4b3a61e445a887e87752a0d0e, type: 3}
+  - textoDialogo: Vaya...
+    expresionPJ: {fileID: 21300000, guid: 3f0890d4b3a61e445a887e87752a0d0e, type: 3}
+  - textoDialogo: Me va a costar bastante hacer esto todo yo solo.
+    expresionPJ: {fileID: 21300000, guid: d3b9cd59d9bb4254884541a672990eb5, type: 3}
