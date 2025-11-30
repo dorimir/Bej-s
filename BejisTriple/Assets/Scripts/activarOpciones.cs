@@ -53,6 +53,8 @@ public class activarOpciones : MonoBehaviour
             panelOpciones.SetActive(false);
 
             jugadorDentro = false;
+            manager.npcActual = null;
+            haEmpezadoDialogo = false;
         }
     }
 
@@ -88,7 +90,6 @@ public class activarOpciones : MonoBehaviour
                 Debug.Log("El npc actual es " + manager.npcActual);
                 if(!haEmpezadoDialogo)
                 {
-                    haEmpezadoDialogo = true;
                     switch(GameManager.Instance.ContadorDeMinijuegos()) 
                     {
                     case 1:
@@ -107,6 +108,7 @@ public class activarOpciones : MonoBehaviour
                         manager.IniciarDialogo(var0);
                         break;
                     }
+                    haEmpezadoDialogo = true;
                 }
             }
         }
@@ -119,6 +121,7 @@ public class activarOpciones : MonoBehaviour
         if(tieneMinijuego)
         {
             botonOpcionUno.gameObject.SetActive(false);
+            botonIniciarMinijuego.GetComponent<opcionDialog_Minijuego>().Minijuego = minijuego;
         }else
         {
             botonIniciarMinijuego.gameObject.SetActive(false);

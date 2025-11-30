@@ -198,13 +198,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelOpciones: {fileID: 0}
-  opcionUno: {fileID: 11400000, guid: 0a2aa281c06f74d42a9e9804df596329, type: 2}
-  opcionDos: {fileID: 11400000, guid: 22a73287145ed834ab7924d217559613, type: 2}
-  opcionTres: {fileID: 11400000, guid: adb41f7a60813ba4499ef6a22b66d7dd, type: 2}
+  var0: {fileID: 11400000, guid: e6c7f74ed3898f943b8cf7c961c21377, type: 2}
+  var1: {fileID: 11400000, guid: cd1b8378afcf2b64291256f633ee6872, type: 2}
+  var2: {fileID: 11400000, guid: fb4844a2296f79940828db1b35e9ad63, type: 2}
+  var3: {fileID: 11400000, guid: fb4844a2296f79940828db1b35e9ad63, type: 2}
+  var4: {fileID: 11400000, guid: 650a5d607b6a43b42aee6d953cb2ad3a, type: 2}
+  opcionUno: {fileID: 11400000, guid: ae6776632a037994badf54138b026fd2, type: 2}
+  opcionDos: {fileID: 11400000, guid: 90340b5f4ae951f428fa2f8c74928cd2, type: 2}
+  opcionTres: {fileID: 11400000, guid: ced3b42d0c751dd42abf4783846715f1, type: 2}
   nombreOpcionUno: {fileID: 0}
   nombreOpcionDos: {fileID: 0}
   nombreOpcionTres: {fileID: 0}
   botonOpcionUno: {fileID: 0}
   botonOpcionDos: {fileID: 0}
   botonOpcionTres: {fileID: 0}
+  botonIniciarMinijuego: {fileID: 0}
   manager: {fileID: 0}
+  variableConOpciones: 0
+  tieneMinijuego: 1
+  minijuego: Establo
+  haEmpezadoDialogo: 0

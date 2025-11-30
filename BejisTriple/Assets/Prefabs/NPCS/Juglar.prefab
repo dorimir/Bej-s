@@ -198,6 +198,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelOpciones: {fileID: 0}
+  var0: {fileID: 11400000, guid: 8e11926f79b41ae44b8e12e1a07186a9, type: 2}
+  var1: {fileID: 11400000, guid: 8e11926f79b41ae44b8e12e1a07186a9, type: 2}
+  var2: {fileID: 11400000, guid: 46bb12d1937999646a6084237abe2941, type: 2}
+  var3: {fileID: 11400000, guid: 46bb12d1937999646a6084237abe2941, type: 2}
+  var4: {fileID: 11400000, guid: 46bb12d1937999646a6084237abe2941, type: 2}
   opcionUno: {fileID: 11400000, guid: 8e11926f79b41ae44b8e12e1a07186a9, type: 2}
   opcionDos: {fileID: 11400000, guid: 46bb12d1937999646a6084237abe2941, type: 2}
   opcionTres: {fileID: 11400000, guid: 3c60455eeeb06a3459c31d21acc968e7, type: 2}
@@ -207,4 +212,9 @@ MonoBehaviour:
   botonOpcionUno: {fileID: 0}
   botonOpcionDos: {fileID: 0}
   botonOpcionTres: {fileID: 0}
+  botonIniciarMinijuego: {fileID: 0}
   manager: {fileID: 0}
+  variableConOpciones: 6
+  tieneMinijuego: 0
+  minijuego: 
+  haEmpezadoDialogo: 0

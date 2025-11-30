@@ -81,8 +81,5 @@ public class managerDialogo : MonoBehaviour
                         Debug.Log("El valor de la variable en el game manager es: " + GameManager.Instance.ContadorDeMinijuegos());
                         npcActual.GetComponent<activarOpciones>().MostrarOpciones();
                     }
-        npcActual.GetComponent<activarOpciones>().haEmpezadoDialogo = false;
-        npcActual = null;
-        //panelOpciones.SetActive(true);
     }
 }

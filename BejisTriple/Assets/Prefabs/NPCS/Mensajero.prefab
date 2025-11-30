@@ -105,16 +105,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelOpciones: {fileID: 0}
+  var0: {fileID: 11400000, guid: 518b4991a8ce2804fa8bd7970e3cffbe, type: 2}
+  var1: {fileID: 11400000, guid: 3ae45d563dfa2734ab3d625ff8f5e69e, type: 2}
+  var2: {fileID: 11400000, guid: 3ae45d563dfa2734ab3d625ff8f5e69e, type: 2}
+  var3: {fileID: 11400000, guid: 3ae45d563dfa2734ab3d625ff8f5e69e, type: 2}
+  var4: {fileID: 11400000, guid: 3ae45d563dfa2734ab3d625ff8f5e69e, type: 2}
   opcionUno: {fileID: 11400000, guid: 518b4991a8ce2804fa8bd7970e3cffbe, type: 2}
   opcionDos: {fileID: 11400000, guid: 3ae45d563dfa2734ab3d625ff8f5e69e, type: 2}
-  opcionTres: {fileID: 11400000, guid: 8f5caa7db1b33ef4bb2f84a417774d9b, type: 2}
+  opcionTres: {fileID: 0}
   nombreOpcionUno: {fileID: 0}
   nombreOpcionDos: {fileID: 0}
   nombreOpcionTres: {fileID: 0}
   botonOpcionUno: {fileID: 0}
   botonOpcionDos: {fileID: 0}
   botonOpcionTres: {fileID: 0}
+  botonIniciarMinijuego: {fileID: 0}
   manager: {fileID: 0}
+  variableConOpciones: 6
+  tieneMinijuego: 0
+  minijuego: 
+  haEmpezadoDialogo: 0
 --- !u!95 &5227934972206530812
 Animator:
   serializedVersion: 7
