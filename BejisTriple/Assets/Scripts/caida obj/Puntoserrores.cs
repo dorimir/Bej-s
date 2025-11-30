@@ -10,7 +10,7 @@ public class Puntoserrores : MonoBehaviour
     public TextMeshProUGUI Puntos;
     private Animator animator;
     //public Sprite spriteerrores;
-    public int errorescometidos;
+    public int errorescometidos=0;
     public int putosobt;
     public GameObject e1;
     public GameObject e2;
@@ -18,9 +18,17 @@ public class Puntoserrores : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void errores(int error){
+        
         errorescometidos+=error;
-        if(errorescometidos==1) e1.SetActive(true);
-        else if(errorescometidos==2) e2.SetActive(true); 
+
+        if(errorescometidos==1){
+            e1.SetActive(true); 
+        }
+        else if(errorescometidos==2){
+            e1.SetActive(false); 
+            e2.SetActive(true); 
+
+        }  
         
 
     }

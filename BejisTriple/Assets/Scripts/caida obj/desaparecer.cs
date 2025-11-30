@@ -2,19 +2,9 @@ using UnityEngine;
 
 public class desaparecer : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject Puntoserrores;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,10 +15,12 @@ public class desaparecer : MonoBehaviour
         switch(collision.collider.tag){
             case "ropacaballo":
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(1);
+                
                 break;
             case "herraduramin":
-
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(1);
                 break;
             default: break;
         }
