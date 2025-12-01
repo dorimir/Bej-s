@@ -15,11 +15,17 @@ MonoBehaviour:
   nombrePJ: Mensajero
   nombreOpcion: "\xBFQue llevas ahi?"
   lineas:
-  - textoDialogo: Esto....
+  - textoDialogo: Bienvenido a la sala mayor
     expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
-  - textoDialogo: esto tan solo son las leyes de la ciudad...
+  - textoDialogo: Bienvenido a la sala mayor
     expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
-  - textoDialogo: Bla bla bli
+  - textoDialogo: "seg\xFAn decreta el Rey."
     expresionPJ: {fileID: 21300000, guid: 9d833119ee5ee7d419be3fb877714fc0, type: 3}
-  - textoDialogo: Bla bla bla
+  - textoDialogo: "Si\xE9ntete bienvenido,"
     expresionPJ: {fileID: 21300000, guid: d12c8538a8d122942bcadc14d738af78, type: 3}
+  - textoDialogo: "seg\xFAn decreta el Rey."
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
+  - textoDialogo: "Ah, no, espera, me equivoqu\xE9."
+    expresionPJ: {fileID: 21300000, guid: 9d833119ee5ee7d419be3fb877714fc0, type: 3}
+  - textoDialogo: "En realidad, el rey decreta que la comida est\xE1 muy salada."
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}

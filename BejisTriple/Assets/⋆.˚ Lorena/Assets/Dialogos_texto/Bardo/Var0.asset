@@ -12,12 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
   m_Name: Var0
   m_EditorClassIdentifier: 
-  nombrePJ: Mensajero
+  nombrePJ: Vocal del rey
   nombreOpcion: "\xBFQuien eres?"
   lineas:
-  - textoDialogo: "\xA1 Yo soy Pim !"
+  - textoDialogo: "Bej\xEDs ahora pertenece a la orden de Calatrava,"
     expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
-  - textoDialogo: Pim el mensajero.
+  - textoDialogo: "Bej\xEDs ahora pertenece a la orden de Calatrava,"
     expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
-  - textoDialogo: "\xBF Necesitas algo ?"
+  - textoDialogo: "seg\xFAn decreta el Rey."
+    expresionPJ: {fileID: 21300000, guid: 9d833119ee5ee7d419be3fb877714fc0, type: 3}
+  - textoDialogo: Esto ahora es territorio cristiano
     expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
+  - textoDialogo: "seg\xFAn decreta el Rey."
+    expresionPJ: {fileID: 21300000, guid: d12c8538a8d122942bcadc14d738af78, type: 3}
