@@ -5212,6 +5212,8 @@ MonoBehaviour:
   player: {fileID: 595527320}
   height: 5
   depth: -12
+  xMin: -6
+  xMax: 12.5
 --- !u!1001 &1876304627
 PrefabInstance:
   m_ObjectHideFlags: 0

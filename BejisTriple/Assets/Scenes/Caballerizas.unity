@@ -13060,6 +13060,8 @@ MonoBehaviour:
   player: {fileID: 101618842}
   height: 5
   depth: -6.5
+  xMin: -25
+  xMax: 25
 --- !u!1001 &1874223653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13682,7 +13684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2992101864800472689, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -2.18
       objectReference: {fileID: 0}
     - target: {fileID: 2992101864800472689, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: m_LocalRotation.w
