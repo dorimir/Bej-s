@@ -4,6 +4,8 @@ using TMPro;
 
 public class managerDialogo : MonoBehaviour
 {
+
+    //Este archivo es el que lleva el manager de dialogos, hay uno en cada escena
     [Header("Referencias UI")]
     public GameObject panelDialogo;
     public TextMeshProUGUI nombreTexto;
@@ -11,12 +13,15 @@ public class managerDialogo : MonoBehaviour
     public Image imagenPJ;
     public GameObject panelOpciones;
 
-    [Header("Bloqueo de interacción")]
+    [Header("Bloqueo de interacciï¿½n")]
     public GameObject bloqueadorInput;
 
-    private dialogoSO dialogoActual;
+    [Header("Personaje con el que se habla")]
+    public GameObject npcActual;
+
+    public dialogoSO dialogoActual;
     private opcionDialogo opcionDialogo;
-    private int indiceLineaActual = 0;
+    public int indiceLineaActual = 0;
     public bool dialogoActivo = false;
 
 
@@ -65,11 +70,16 @@ public class managerDialogo : MonoBehaviour
         imagenPJ.sprite = linea.expresionPJ;
     }
 
-    void TerminarDialogo()
+    public void TerminarDialogo()
     {
         dialogoActivo = false;
         panelDialogo.SetActive(false);
         bloqueadorInput.SetActive(false); 
-        panelOpciones.SetActive(true);
+        if(GameManager.Instance.ContadorDeMinijuegos()== npcActual.GetComponent<activarOpciones>().variableConOpciones)
+                    {
+                        Debug.Log("La variable en la que deberÃ­a haber minijuego es: " + npcActual.GetComponent<activarOpciones>().variableConOpciones);
+                        Debug.Log("El valor de la variable en el game manager es: " + GameManager.Instance.ContadorDeMinijuegos());
+                        npcActual.GetComponent<activarOpciones>().MostrarOpciones();
+                    }
     }
 }

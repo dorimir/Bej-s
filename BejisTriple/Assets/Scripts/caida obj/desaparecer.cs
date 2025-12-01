@@ -2,19 +2,9 @@ using UnityEngine;
 
 public class desaparecer : MonoBehaviour
 {
-    public GameObject obj;
+    public GameObject Puntoserrores;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,40 +15,16 @@ public class desaparecer : MonoBehaviour
         switch(collision.collider.tag){
             case "ropacaballo":
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(1);
+                
                 break;
             case "herraduramin":
-
                 Destroy(collision.gameObject);
+                Puntoserrores.GetComponent<Puntoserrores>().errores(1);
                 break;
             default: break;
         }
     }
 }
 
-/*void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject == surface)
-        {
-            switch(transform.GetChild(1).gameObject.tag)
-            {
-                case "Trucha":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(1);
-                    break;
-                case "Carpa":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(3);
-                    break;
-                case "Siluro":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(7);
-                    break;
-                case "Barbo":
-                        TimeAndScore.GetComponent<TimeAndScore>().AddScore(12);
-                    break;
-                default:
-                        break;
-            }
-            Destroy(transform.GetChild(1).gameObject);
-            HasSomethingHooked = false;
-        }
-    }
-*/
 

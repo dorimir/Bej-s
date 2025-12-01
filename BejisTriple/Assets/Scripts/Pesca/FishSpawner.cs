@@ -41,7 +41,6 @@ public class FishSpawner : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.X))
             {
                 SceneManager.LoadScene("Rio", LoadSceneMode.Single);
-                //En el futuro reemplazaremos esto por otra escena
             }
         }
     }
@@ -64,6 +63,7 @@ public class FishSpawner : MonoBehaviour
         {
             SeAcaboText.text = "¡HAS GANADO!";
             //Hacer las acciones necesarias cuando se gane
+            GameManager.Instance.minijuegoCompletado(2);
         }
         else  SeAcaboText.text = "¡QUÉ LÁSTIMA!";
     }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
+  m_Name: Var1
+  m_EditorClassIdentifier: 
+  nombrePJ: Mensajero
+  nombreOpcion: "\xBFQue llevas ahi?"
+  lineas:
+  - textoDialogo: Bienvenido a la sala mayor
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
+  - textoDialogo: Bienvenido a la sala mayor
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
+  - textoDialogo: "seg\xFAn decreta el Rey."
+    expresionPJ: {fileID: 21300000, guid: 9d833119ee5ee7d419be3fb877714fc0, type: 3}
+  - textoDialogo: "Si\xE9ntete bienvenido,"
+    expresionPJ: {fileID: 21300000, guid: d12c8538a8d122942bcadc14d738af78, type: 3}
+  - textoDialogo: "seg\xFAn decreta el Rey."
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}
+  - textoDialogo: "Ah, no, espera, me equivoqu\xE9."
+    expresionPJ: {fileID: 21300000, guid: 9d833119ee5ee7d419be3fb877714fc0, type: 3}
+  - textoDialogo: "En realidad, el rey decreta que la comida est\xE1 muy salada."
+    expresionPJ: {fileID: 21300000, guid: 2d82695254e4c514d9cde4c109c37c60, type: 3}

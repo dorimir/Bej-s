@@ -15,4 +15,7 @@ public class tutorial : MonoBehaviour
     public void restart(){
         SceneManager.LoadScene(2);
     }
+    public void continuar(){
+        SceneManager.LoadScene(3);
+    }
 }
