@@ -15,4 +15,7 @@ public class SimpleSceneChanger : MonoBehaviour
     public void Menu(){
         SceneManager.LoadScene(0);
     }
+    public void Salir(){
+        Application.Quit();
+    }
 }
