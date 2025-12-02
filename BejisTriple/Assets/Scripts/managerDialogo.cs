@@ -72,6 +72,7 @@ public class managerDialogo : MonoBehaviour
 
     public void TerminarDialogo()
     {
+        npcActual.GetComponent<Animator>().SetBool("talking", false);
         dialogoActivo = false;
         panelDialogo.SetActive(false);
         bloqueadorInput.SetActive(false); 

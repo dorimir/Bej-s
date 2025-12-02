@@ -55,6 +55,8 @@ public class activarOpciones : MonoBehaviour
             jugadorDentro = false;
             manager.npcActual = null;
             haEmpezadoDialogo = false;
+
+            GetComponent<Animator>().SetBool("talking", false);
         }
     }
 
@@ -90,6 +92,7 @@ public class activarOpciones : MonoBehaviour
                 Debug.Log("El npc actual es " + manager.npcActual);
                 if(!haEmpezadoDialogo)
                 {
+                    GetComponent<Animator>().SetBool("talking", true);
                     switch(GameManager.Instance.ContadorDeMinijuegos()) 
                     {
                     case 1:

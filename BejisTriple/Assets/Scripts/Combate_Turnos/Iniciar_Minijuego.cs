@@ -16,7 +16,7 @@ public class Iniciar_Minijuego : MonoBehaviour
     void Start()
     {
         tipo_enemigo = 1;
-        CrearCombate;
+        CrearCombate();
     }
 
     void CrearCombate()

@@ -1388,7 +1388,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Mueve el anzuelo con las flechas/WASD\nToca un pez por la boca para engancharlo
-    al anzuelo y ll\xE9valo hasta la superficie para pescarlo\n\xA1Obt\xE9n 60 puntos
+    al anzuelo y ll\xE9valo hasta la superficie para pescarlo\n\xA1Obt\xE9n 40 puntos
     en 60 segundos para ganar!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

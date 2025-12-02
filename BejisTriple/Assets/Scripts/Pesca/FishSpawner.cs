@@ -59,7 +59,7 @@ public class FishSpawner : MonoBehaviour
         anzuelo.SetActive(false);
         SeAcaboText.gameObject.SetActive(true);
         RetryAndExitText.gameObject.SetActive(true);
-        if (TimeAndScore.GetComponent<TimeAndScore>().score >= 60)
+        if (TimeAndScore.GetComponent<TimeAndScore>().score >= 40)
         {
             SeAcaboText.text = "¡HAS GANADO!";
             //Hacer las acciones necesarias cuando se gane
