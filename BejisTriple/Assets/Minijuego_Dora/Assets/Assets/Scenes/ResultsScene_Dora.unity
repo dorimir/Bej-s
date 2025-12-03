@@ -150,7 +150,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 318467230}
-  - {fileID: 1679910572}
   m_Father: {fileID: 609358718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -272,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617182583075394396, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 7617182583075394396, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -457,7 +456,7 @@ GameObject:
   - component: {fileID: 318467232}
   - component: {fileID: 318467231}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Win_b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -673,6 +672,7 @@ RectTransform:
   - {fileID: 1674096549}
   - {fileID: 628533217}
   - {fileID: 3557339}
+  - {fileID: 1679910572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -823,11 +823,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3557339}
+    m_TransformParent: {fileID: 609358718}
     m_Modifications:
     - target: {fileID: 643870513927756199, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: nextSceneName
       value: Rio
+      objectReference: {fileID: 0}
+    - target: {fileID: 643870513927756199, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
+      propertyPath: transitionTime
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 643870513927756199, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: activationButton
@@ -847,7 +851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7617182583075394396, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 7617182583075394396, guid: 0880028dca3deb84d867c717ba044b8e, type: 3}
       propertyPath: m_LocalRotation.w
