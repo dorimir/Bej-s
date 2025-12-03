@@ -13,6 +13,7 @@ public class Bird3D : MonoBehaviour
     [SerializeField] private LineRenderer trajectoryLine;
     [SerializeField] private GameObject targetObject;
     [SerializeField] private Vector3 centerOfMassOffset = new Vector3(0.5f, 0, 0);
+    [SerializeField] private Trayectoria trayectoria;
 
     private bool isPressed = false;
     private Camera mainCam;
@@ -78,6 +79,11 @@ public class Bird3D : MonoBehaviour
     {
         isPressed = true;
         birdRigidbody.isKinematic = true;
+        if (trayectoria != null)
+        {
+            trayectoria.OnArrowPressed();
+        }
+
 
         birdRigidbody.constraints = RigidbodyConstraints.FreezePositionZ |
                                      RigidbodyConstraints.FreezeRotationX |
@@ -90,6 +96,11 @@ public class Bird3D : MonoBehaviour
         isPressed = false;
         birdRigidbody.isKinematic = false;
         hasLaunched = true;
+
+        if (trayectoria != null)  // ← AÑADE ESTO
+        {
+            trayectoria.OnArrowReleased();
+        }
 
         birdRigidbody.constraints = RigidbodyConstraints.FreezePositionZ |
                                      RigidbodyConstraints.FreezeRotationX |
