@@ -23,6 +23,8 @@ public class Trayectoria : MonoBehaviour
     {
         mainCam = Camera.main;
 
+        Debug.Log("Trayectoria Start - Creando puntos...");
+
         // Crear los puntos de la trayectoria
         puntos = new GameObject[numeroDePuntos];
 
@@ -31,15 +33,20 @@ public class Trayectoria : MonoBehaviour
             puntos[i] = Instantiate(puntoPrefab, transform);
             puntos[i].SetActive(false);
 
-            // Aplicar opacidad
+            Debug.Log($"Punto {i} creado");
+
+            // Aplicar opacidad con gradiente (más transparente al inicio, más opaco al final)
             SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
             if (sr != null)
             {
+                float factorOpacidad = (float)i / numeroDePuntos; // 0.0 al inicio, 1.0 al final
                 Color color = sr.color;
-                color.a = opacidad;
+                color.a = opacidad * factorOpacidad;
                 sr.color = color;
             }
         }
+
+        Debug.Log($"Total puntos creados: {puntos.Length}");
     }
 
     void Update()
@@ -57,7 +64,6 @@ public class Trayectoria : MonoBehaviour
     // Métodos públicos para que Bird3D los llame
     public void OnArrowPressed()
     {
-        Debug.Log("Trayectoria activada");
         isPressed = true;
     }
 
@@ -74,7 +80,7 @@ public class Trayectoria : MonoBehaviour
 
         // Calcular la dirección de lanzamiento (igual que en Bird3D)
         Vector3 launchDirection = shootPos - birdPos;
-        launchDirection.z = 90;
+        launchDirection.z = 0;
 
         // Calcular la velocidad inicial
         float stretchDistance = launchDirection.magnitude;
@@ -87,17 +93,18 @@ public class Trayectoria : MonoBehaviour
 
             // Calcular posición usando física (igual que DrawTrajectory en Bird3D)
             Vector3 posicion = birdPos + velocidad * tiempo + 0.5f * Physics.gravity * tiempo * tiempo;
-            posicion.z = birdPos.z;
+            posicion.z = birdPos.z; // Mantener en el mismo plano Z (2D)
 
             puntos[i].transform.position = posicion;
             puntos[i].SetActive(true);
 
-            // Aplicar opacidad actualizada
+            // Aplicar opacidad con gradiente actualizado (más transparente al inicio, más opaco al final)
             SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
             if (sr != null)
             {
+                float factorOpacidad = (float)i / numeroDePuntos;
                 Color color = sr.color;
-                color.a = opacidad;
+                color.a = opacidad * factorOpacidad;
                 sr.color = color;
             }
         }

@@ -27,17 +27,23 @@ public class Bird3D : MonoBehaviour
         mainCam = Camera.main;
         springJoint = GetComponent<SpringJoint>();
 
+        // Congelar todo para mantenerlo en 2D
         birdRigidbody.constraints = RigidbodyConstraints.FreezePositionZ |
                                      RigidbodyConstraints.FreezeRotationX |
                                      RigidbodyConstraints.FreezeRotationY;
 
-        birdRigidbody.centerOfMass = centerOfMassOffset;
+        // CAMBIA ESTO: Pon el centro de masa en (0, 0, 0) para evitar rotaciones raras
+        birdRigidbody.centerOfMass = Vector3.zero;
+
     }
 
     private void Update()
     {
         if (isPressed)
         {
+            Vector3 currentRotation = transform.rotation.eulerAngles;
+            transform.rotation = Quaternion.Euler(0, 0, currentRotation.z);
+
             Vector3 mousePos = Input.mousePosition;
             mousePos.z = mainCam.WorldToScreenPoint(birdRigidbody.position).z;
             mousePos = mainCam.ScreenToWorldPoint(mousePos);
@@ -146,7 +152,6 @@ public class Bird3D : MonoBehaviour
         }
         else
         {
-            Debug.Log("[Bird3D] Flecha marcada como persistente, NO se destruirá");
         }
 
         yield return new WaitForSeconds(5f);
