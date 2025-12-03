@@ -168,7 +168,7 @@ public class Bird3D : MonoBehaviour
         // Si toca el objeto objetivo, cambiar de escena
         if (targetObject != null && collision.gameObject == targetObject)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("TiroConArco");
         }
     }
 

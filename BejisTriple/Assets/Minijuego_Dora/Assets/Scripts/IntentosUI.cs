@@ -22,7 +22,7 @@ public class IntentosUI : MonoBehaviour
         if (remainingTries <= 0 && !hasLoadedScene2)
         {
             hasLoadedScene2 = true;
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("ResultsScene_Dora");
             return;
         }
 

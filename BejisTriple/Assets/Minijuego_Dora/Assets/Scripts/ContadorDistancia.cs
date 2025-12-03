@@ -118,7 +118,7 @@ public class ContadorDistancia : MonoBehaviour
         if (!string.IsNullOrEmpty(nextSceneName))
             SceneManager.LoadScene(nextSceneName);
         else
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("ResultsScene_Dora");
     }
 
     public void OnArrowCollided()
@@ -181,15 +181,15 @@ public class ContadorDistancia : MonoBehaviour
     private IEnumerator ReloadSceneForNextTry()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("TiroConArco");
     }
 
     private IEnumerator LoadLoseSceneDelayed()
     {
         // Esperar más tiempo para que se complete el zoom
         yield return new WaitForSeconds(3f);
-        Debug.Log("[ContadorDistancia] Cargando Scene 2 por DERROTA");
-        SceneManager.LoadScene(2);
+        //ContadorDistancia.ResetGame();
+        SceneManager.LoadScene("ResultsScene_Dora");
     }
 
     public static void ResetGame()

@@ -18,7 +18,7 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(delayBeforeTransition);
 
         // Load Scene 1 (by name or build index)
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("TiroConArco");
         // Or: SceneManager.LoadScene("Scene1"); if you prefer using the scene name
     }
 }

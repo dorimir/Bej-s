@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: d37f1ec68360e814cbe3d294c4a9d8ec
   - enabled: 1
     path: Assets/Scenes/Caballerizas.unity
-    guid: 77fdc338144a6ea4b8164dd0e5b63e83
+    guid: 55adf91bf4a4a9a4a9ac798c1511cc07
   - enabled: 1
     path: Assets/Scenes/CallePueblo.unity
     guid: 9b66605602a0cba4c84b6933a2d8b26b
@@ -31,7 +31,7 @@ EditorBuildSettings:
     guid: 8da517ca8464a5b48a05071ca13e2ae8
   - enabled: 1
     path: Assets/Scenes/Horno.unity
-    guid: 355c2c2e9284e5647901e14146b57fea
+    guid: 5af2b34206793244ca902dc1192ad49b
   - enabled: 1
     path: Assets/Scenes/MurallaExterior.unity
     guid: e65c8d085d2c52445ad475bcbff62591
@@ -50,6 +50,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro_Cutscene.unity
     guid: efb38581b6df8f249864c243b207bb96
+  - enabled: 1
+    path: Assets/Minijuego_Dora/Assets/Assets/Scenes/Dialogue_Dora.unity
+    guid: 16dc38e958822e54a868ff94a448367d
+  - enabled: 1
+    path: Assets/Minijuego_Dora/Assets/Assets/Scenes/TutorialScene_Dora.unity
+    guid: 4bd9b222b6d666b42b44776437375b97
+  - enabled: 1
+    path: Assets/Minijuego_Dora/Assets/Assets/Scenes/TiroConArco.unity
+    guid: 3741ba44d35cfa149b4b8661b03366a0
+  - enabled: 1
+    path: Assets/Minijuego_Dora/Assets/Assets/Scenes/ResultsScene_Dora.unity
+    guid: 52f6dc173b1d10740a61573a73869699
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

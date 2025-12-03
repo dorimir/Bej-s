@@ -32,12 +32,12 @@ public class WinScreenManager : MonoBehaviour
     public void LoadScene1()
     {
         ContadorDistancia.ResetGame(); // Resetear antes de volver
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("TiroConArco");
     }
 
     public void LoadScene0()
     {
         ContadorDistancia.ResetGame(); // Resetear antes de volver
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Rio");
     }
 }

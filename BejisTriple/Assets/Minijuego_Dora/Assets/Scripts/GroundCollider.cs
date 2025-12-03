@@ -14,7 +14,7 @@ public class GroundCollider : MonoBehaviour
             if (ContadorDistancia.loseCount >= 3)
             {
                 // NO llamar a ResetGame() aquí - se hace desde WinScreenManager
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("ResultsScene_Dora");
             }
         }
     }
