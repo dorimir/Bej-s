@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,10 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public bool miraizq =false;
     public bool espalda = false;
 
+    AudioSource audioSource;
+    public AudioClip walking, walkingGrass;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         animator=GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -28,8 +33,18 @@ public class PlayerMovement : MonoBehaviour
         if (hor != 0.0f || ver != 0.0f)
         {
             Vector3 dir = (transform.forward * ver + transform.right * hor).normalized;
-            rb.position += dir * speed * Time.deltaTime; 
-        }
+            rb.position += dir * speed * Time.deltaTime;
+            if(!audioSource.isPlaying)
+            {
+                if(SceneManager.GetActiveScene().name == "Rio")
+                {
+                    audioSource.clip = walkingGrass;
+                }
+                else audioSource.clip = walking;
+                audioSource.Play();
+            }
+            
+        }else audioSource.Stop();
 
         if(hor>0){
             animator.SetBool("IsRunning", true);

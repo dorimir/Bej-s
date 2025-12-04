@@ -9,6 +9,9 @@ public class TimeAndScore : MonoBehaviour
     public int score = 0;
     public float seconds = 60.0f;
     public GameObject fishSpawner;
+
+    public AudioSource audioSource;
+    bool hasAudioPlayed = false;
     public void AddScore(int points)
     {
         score += points;
@@ -21,6 +24,12 @@ public class TimeAndScore : MonoBehaviour
         {
             seconds -= Time.deltaTime;
             timeText.text = "Tiempo: " + Mathf.FloorToInt(seconds % 60);
+        }
+        if(seconds<=5 && !hasAudioPlayed)
+        {
+            audioSource.clip = audioSource.gameObject.GetComponent<SFXManagerPesca>().fin;
+            audioSource.Play();
+            hasAudioPlayed = true;
         }
         if (seconds <= 0 && !terminado)
         {

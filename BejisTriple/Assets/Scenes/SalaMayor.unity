@@ -5416,6 +5416,9 @@ MonoBehaviour:
   dialogoActual: {fileID: 0}
   indiceLineaActual: 0
   dialogoActivo: 0
+  audioSource: {fileID: 0}
+  dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
+  boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
 --- !u!1 &2014772930
 GameObject:
   m_ObjectHideFlags: 0
