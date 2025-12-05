@@ -96,12 +96,13 @@ public class ContadorDistancia : MonoBehaviour
             OnWin();
         }
     }
-
     private void OnWin()
     {
         Debug.Log($"[ContadorDistancia] ¡VICTORIA! Distancia: {maxDistance:F1}m");
 
-        // Reproducir confetti
+        // Registrar el intento con la distancia real alcanzada
+        ResultsLogger.RegisterAttempt(GetCurrentTry(), maxDistance);
+
         if (effectsManager != null && arrow != null)
         {
             effectsManager.PlayConfetti(arrow.position);
@@ -135,8 +136,13 @@ public class ContadorDistancia : MonoBehaviour
         {
             arrow.SetParent(null);
             arrow.gameObject.name = $"PersistentArrow_{loseCount + 1}";
+
+            // 🚨 MUY IMPORTANTE: evitar que la flecha tenga tag Player
+            arrow.tag = "Untagged";
+
             DontDestroyOnLoad(arrow.gameObject);
             persistentArrows.Add(arrow.gameObject);
+
 
             Rigidbody rb = arrow.GetComponent<Rigidbody>();
             if (rb != null)
@@ -145,6 +151,9 @@ public class ContadorDistancia : MonoBehaviour
                 rb.angularVelocity = Vector3.zero;
                 rb.isKinematic = true;
             }
+
+            // Dentro de OnArrowCollided(), después de calcular maxDistance
+            ResultsLogger.RegisterAttempt(GetCurrentTry(), GetMaxDistance());
 
             Collider col = arrow.GetComponent<Collider>();
             if (col != null) col.enabled = false;
@@ -205,5 +214,8 @@ public class ContadorDistancia : MonoBehaviour
         persistentArrows.Clear();
 
         CameraCutSceneController.ResetCutScene();
+
+        // 🔑 Resetear también los resultados
+        ResultsLogger.ResetResults();
     }
 }
