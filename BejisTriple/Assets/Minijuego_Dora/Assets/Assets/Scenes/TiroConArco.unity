@@ -1221,7 +1221,7 @@ MonoBehaviour:
   effectsManager: {fileID: 972974977}
   showMeters: 1
   decimalPlaces: 1
-  targetDistance: 70
+  targetDistance: 20
   nextSceneName: 
   maxTries: 3
 --- !u!1 &959607125
@@ -1343,10 +1343,10 @@ MonoBehaviour:
   mainCamera: {fileID: 1756019044}
   bowTransform: {fileID: 634901208}
   arrowTransform: {fileID: 1546847144}
-  confettiPrefab: {fileID: 0}
-  confettiCount: 30
-  explosionForce: 5
-  confettiLifetime: 3
+  confettiPrefab: {fileID: 4380246258540042190, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+  confettiCount: 100
+  explosionForce: 27.1
+  confettiLifetime: 3.04
   confettiColors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
@@ -3100,7 +3100,7 @@ CapsuleCollider:
   m_Radius: 0.8341685
   m_Height: 5.0793886
   m_Direction: 0
-  m_Center: {x: -0.060431004, y: -0.1813299, z: 1.6081042}
+  m_Center: {x: -0.060431004, y: -0.1813299, z: 0}
 --- !u!1 &1582694306
 GameObject:
   m_ObjectHideFlags: 0
