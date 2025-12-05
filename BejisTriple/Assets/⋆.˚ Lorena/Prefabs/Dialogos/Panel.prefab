@@ -195,7 +195,7 @@ SpriteRenderer:
   m_Size: {x: 1.56, y: 0.34}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!222 &2696748107021460874
@@ -482,8 +482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.56078434, g: 0.42688835, b: 0.40784314, a: 0}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 0.759434, b: 0.759434, a: 0}
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
