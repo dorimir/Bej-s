@@ -10,6 +10,7 @@ public class FishSpawner : MonoBehaviour
     public GameObject carpa, trucha, siluro, barbo, basura, bubbleParticles;
     public TextMeshProUGUI SeAcaboText, RetryAndExitText;
     public GameObject tutorial;
+    public AudioSource audioSource;
 
     public GameObject anzuelo, TimeAndScore;
     public float speed = 3;
@@ -99,6 +100,8 @@ public class FishSpawner : MonoBehaviour
             {
                 Instantiate(bubbleParticles, new UnityEngine.Vector3(8.5f, spawnPointY, 2), UnityEngine.Quaternion.identity);
             }
+            audioSource.clip = audioSource.gameObject.GetComponent<SFXManagerPesca>().burbujas;
+            audioSource.Play();
             StartCoroutine(SpawnBarbo(spawnPointX, spawnPointY));
             yield break;
         }
@@ -134,6 +137,8 @@ public class FishSpawner : MonoBehaviour
     private IEnumerator SpawnBarbo(float spawnPointX, float spawnPointY)
     {
         yield return new WaitForSeconds(2f);
+        audioSource.clip = audioSource.gameObject.GetComponent<SFXManagerPesca>().barboWhoosh;
+        audioSource.Play();
         GameObject spawnedFish = Instantiate(barbo, new UnityEngine.Vector3(spawnPointX, spawnPointY, 2), UnityEngine.Quaternion.identity);
         speed = 10;
 

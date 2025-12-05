@@ -24,7 +24,13 @@ public class managerDialogo : MonoBehaviour
     public int indiceLineaActual = 0;
     public bool dialogoActivo = false;
 
+    public AudioSource audioSource; 
+    public AudioClip dialogo, boton;
 
+    void Awake()
+    {
+        audioSource= panelDialogo.transform.parent.GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -51,6 +57,7 @@ public class managerDialogo : MonoBehaviour
 
     void MuestraSiguienteLinea()
     {
+
         indiceLineaActual++;
 
         if (indiceLineaActual < dialogoActual.lineas.Length)
@@ -65,6 +72,12 @@ public class managerDialogo : MonoBehaviour
 
     void MostrarLinea(lineaDialogo linea)
     {
+        if(!audioSource.isPlaying || audioSource.clip == dialogo)
+        {
+            audioSource.clip = dialogo;
+            audioSource.Play();
+        }
+        
         nombreTexto.text = dialogoActual.nombrePJ;
         dialogoTexto.text = linea.textoDialogo;
         imagenPJ.sprite = linea.expresionPJ;

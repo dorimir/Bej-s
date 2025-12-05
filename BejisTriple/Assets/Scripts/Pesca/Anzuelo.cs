@@ -10,6 +10,7 @@ public class Anzuelo : MonoBehaviour
     public GameObject surface;
 
     public GameObject TimeAndScore;
+    public AudioSource audioSource;
 
     bool HasSomethingHooked = false;
 
@@ -46,6 +47,8 @@ public class Anzuelo : MonoBehaviour
                 default:
                         break;
             }
+            audioSource.clip = audioSource.gameObject.GetComponent<SFXManagerPesca>().sacarDelAgua;
+            audioSource.Play();
             Destroy(transform.GetChild(1).gameObject);
             HasSomethingHooked = false;
         }
@@ -56,6 +59,8 @@ public class Anzuelo : MonoBehaviour
         if (HasSomethingHooked == true) return;
         if(collision.tag == "Trucha" || collision.tag == "Carpa" || collision.tag == "Siluro" || collision.tag == "Barbo" || collision.tag == "BasuraDeRio")
         {
+            audioSource.clip = audioSource.gameObject.GetComponent<SFXManagerPesca>().enganchar;
+            audioSource.Play();
             collision.transform.SetParent(this.transform);
             collision.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePosition;
             collision.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(0, 0);

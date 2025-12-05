@@ -1,0 +1,146 @@
+using UnityEngine;
+
+public class Trayectoria : MonoBehaviour
+{
+    [Header("Referencias")]
+    [SerializeField] private Transform puntoInicial; // Tu flecha
+    [SerializeField] private Transform shootPosition; // El punto de anclaje
+    [SerializeField] private GameObject puntoPrefab;
+
+    [Header("Configuración")]
+    [SerializeField] private int numeroDePuntos = 30;
+    [SerializeField] private float tiempoEntreSimulacion = 0.05f;
+    [SerializeField] private float launchForce = 15f; // Debe coincidir con Bird3D
+
+    [Header("Visual")]
+    [SerializeField] private float opacidad = 0.5f;
+
+    private GameObject[] puntos;
+    private Camera mainCam;
+    private bool isPressed = false;
+
+    void Start()
+    {
+        mainCam = Camera.main;
+
+        Debug.Log("Trayectoria Start - Creando puntos...");
+
+        // Crear los puntos de la trayectoria
+        puntos = new GameObject[numeroDePuntos];
+
+        for (int i = 0; i < numeroDePuntos; i++)
+        {
+            puntos[i] = Instantiate(puntoPrefab, transform);
+            puntos[i].SetActive(false);
+
+            Debug.Log($"Punto {i} creado");
+
+            // Aplicar opacidad con gradiente (más transparente al inicio, más opaco al final)
+            SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                float factorOpacidad = (float)i / numeroDePuntos; // 0.0 al inicio, 1.0 al final
+                Color color = sr.color;
+                color.a = opacidad * factorOpacidad;
+                sr.color = color;
+            }
+        }
+
+        Debug.Log($"Total puntos creados: {puntos.Length}");
+    }
+
+    void Update()
+    {
+        if (isPressed && puntoInicial != null && shootPosition != null)
+        {
+            MostrarTrayectoria();
+        }
+        else
+        {
+            OcultarPuntos();
+        }
+    }
+
+    // Métodos públicos para que Bird3D los llame
+    public void OnArrowPressed()
+    {
+        isPressed = true;
+    }
+
+    public void OnArrowReleased()
+    {
+        isPressed = false;
+        OcultarPuntos();
+    }
+
+    void MostrarTrayectoria()
+    {
+        Vector3 birdPos = puntoInicial.position;
+        Vector3 shootPos = shootPosition.position;
+
+        // Calcular la dirección de lanzamiento (igual que en Bird3D)
+        Vector3 launchDirection = shootPos - birdPos;
+        launchDirection.z = 0;
+
+        // Calcular la velocidad inicial
+        float stretchDistance = launchDirection.magnitude;
+        Vector3 velocidad = launchDirection.normalized * launchForce * stretchDistance;
+
+        for (int i = 0; i < numeroDePuntos; i++)
+        {
+            // Calcular tiempo de simulación
+            float tiempo = i * tiempoEntreSimulacion;
+
+            // Calcular posición usando física (igual que DrawTrajectory en Bird3D)
+            Vector3 posicion = birdPos + velocidad * tiempo + 0.5f * Physics.gravity * tiempo * tiempo;
+            posicion.z = birdPos.z; // Mantener en el mismo plano Z (2D)
+
+            puntos[i].transform.position = posicion;
+            puntos[i].SetActive(true);
+
+            // Aplicar opacidad con gradiente actualizado (más transparente al inicio, más opaco al final)
+            SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                float factorOpacidad = (float)i / numeroDePuntos;
+                Color color = sr.color;
+                color.a = opacidad * factorOpacidad;
+                sr.color = color;
+            }
+        }
+    }
+
+    // Para cambiar la opacidad en tiempo real
+    public void CambiarOpacidad(float nuevaOpacidad)
+    {
+        opacidad = Mathf.Clamp01(nuevaOpacidad);
+    }
+
+    // Para activar/desactivar la trayectoria
+    public void MostrarLinea(bool mostrar)
+    {
+        isPressed = mostrar;
+
+        if (puntos != null && !mostrar)
+        {
+            OcultarPuntos();
+        }
+    }
+
+    private void OcultarPuntos()
+    {
+        if (puntos != null)
+        {
+            foreach (GameObject punto in puntos)
+            {
+                punto.SetActive(false);
+            }
+        }
+    }
+
+    // Para ajustar la fuerza en tiempo real
+    public void CambiarFuerza(float nuevaFuerza)
+    {
+        launchForce = nuevaFuerza;
+    }
+}
