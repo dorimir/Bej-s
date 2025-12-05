@@ -23,14 +23,11 @@ public class managerDialogo : MonoBehaviour
     public int indiceLineaActual = 0;
     public bool dialogoActivo = false;
 
-<<<<<<< HEAD
+
     public AudioSource audioSource; 
     public AudioClip dialogo, boton;
 
-    void Awake()
-    {
-        audioSource= panelDialogo.transform.parent.GetComponent<AudioSource>();
-=======
+
     // --------- HINT 1 (igual que antes) ----------
     [Header("Hint 1 (cerca del NPC)")]
     public SpriteRenderer hintSprite1;
@@ -58,6 +55,7 @@ public class managerDialogo : MonoBehaviour
 
     void Awake()
     {
+        audioSource = panelDialogo.transform.parent.GetComponent<AudioSource>();
         if (detectionOrigin == null)
         {
             detectionOrigin = npcActual != null ? npcActual.transform : transform;
@@ -84,7 +82,6 @@ public class managerDialogo : MonoBehaviour
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null) player = playerObj.transform;
         }
->>>>>>> branch_dora
     }
 
     void Update()
