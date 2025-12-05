@@ -58,15 +58,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.53602344, g: 0.503026, b: 0.6792453, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.38431373}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 9c67c4d7c229ce34eb1ad2a9b16f2ec0, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -653,10 +653,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4048729557156610290}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 3022081712736237676, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
       propertyPath: m_SortingLayer
       value: 0
       objectReference: {fileID: 0}
+=======
+    - target: {fileID: 1763529054953711147, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 2fa5f3606e50ca441b5a6730c1b80000, type: 2}
+>>>>>>> branch_dora
     - target: {fileID: 3049316370383104489, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
       propertyPath: m_Name
       value: Panel
@@ -664,6 +671,42 @@ PrefabInstance:
     - target: {fileID: 3049316370383104489, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695166821415724709, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b1b977076aa0b7419f1984eb3beb145, type: 3}
+    - target: {fileID: 3695166821415724709, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695166821415724709, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695166821415724709, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933248806184255731, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508366811427735455, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508366811427735455, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508366811427735455, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508366811427735455, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7512188718747651867, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
       propertyPath: m_Pivot.x
@@ -744,6 +787,18 @@ PrefabInstance:
     - target: {fileID: 7512188718747651867, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607936184693790221, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607936184693790221, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607936184693790221, guid: 0f3d85aa1c8a36f468a65897a0e809a9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
