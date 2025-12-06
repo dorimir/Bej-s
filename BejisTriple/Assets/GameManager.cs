@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    AudioSource audioSource;
     public static GameManager Instance { get; private set; }
     int contadorMinijuegos = 0;
 
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); //Si creamos un segundo Game Manager, este ultimo se destruye
         }
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void minijuegoCompletado(int nuevoValor)
@@ -66,5 +68,10 @@ public class GameManager : MonoBehaviour
     public int ContadorDeMinijuegos()
     {
         return contadorMinijuegos;
+    }
+    public void sonidoCambiarEscena (AudioClip clip)
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 }
