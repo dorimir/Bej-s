@@ -29,11 +29,11 @@ public class IntentosUI : MonoBehaviour
         // Actualizar el texto
         if (remainingTries == 1)
         {
-            intentosText.text = "¡Última oportunidad!";
+            intentosText.text = "¡No habrá más!";
         }
         else
         {
-            intentosText.text = $"Intento {currentTry} / {maxTries}";
+            intentosText.text = $"{currentTry} / {maxTries}";
         }
     }
 }
