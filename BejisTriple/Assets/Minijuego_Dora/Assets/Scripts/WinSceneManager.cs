@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class WinScreenManager : MonoBehaviour
@@ -6,38 +6,49 @@ public class WinScreenManager : MonoBehaviour
     public static bool showWinScreen = false;
 
     public GameObject winPanel;
-    public GameObject losePanel; // A�ADE ESTO
+    public GameObject losePanel;
 
-    private void Start()
+    private void OnEnable()
     {
-        // Esconder ambos al inicio
-        if (winPanel != null) winPanel.SetActive(false);
-        if (losePanel != null) losePanel.SetActive(false);
+        Update();
+    }
 
-        // Mostrar victoria
-        if (showWinScreen)
+    // Llamar a esta función siempre que haya un cambio de estado
+    private void Update()
+    {
+        // Mostrar derrota si el jugador ha perdido y el panel aún no está activo
+        if (ContadorDistancia.loseCount >= 3 && !losePanel.activeSelf)
         {
-            if (winPanel != null) winPanel.SetActive(true);
+            losePanel.SetActive(true);
+            winPanel.SetActive(false);
+            Debug.Log("[WinScreenManager] Mostrando DERROTA");
+        }
+
+        // Mostrar victoria si toca
+        if (showWinScreen && !winPanel.activeSelf)
+        {
+            winPanel.SetActive(true);
+            losePanel.SetActive(false);
             showWinScreen = false;
             Debug.Log("[WinScreenManager] Mostrando VICTORIA");
         }
-        // Mostrar derrota
-        else if (ContadorDistancia.loseCount >= 3)
-        {
-            if (losePanel != null) losePanel.SetActive(true);
-            Debug.Log("[WinScreenManager] Mostrando DERROTA");
-        }
+    }
+
+    private void SetPanelActive(GameObject panel, bool active)
+    {
+        if (panel != null)
+            panel.SetActive(active);
     }
 
     public void LoadScene1()
     {
-        ContadorDistancia.ResetGame(); // Resetear antes de volver
+        ContadorDistancia.ResetGame();
         SceneManager.LoadScene("TiroConArco");
     }
 
     public void LoadScene0()
     {
-        ContadorDistancia.ResetGame(); // Resetear antes de volver
+        ContadorDistancia.ResetGame();
         SceneManager.LoadScene("Rio");
     }
 }
