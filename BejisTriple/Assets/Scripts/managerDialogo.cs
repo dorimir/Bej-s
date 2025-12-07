@@ -177,6 +177,10 @@ public class managerDialogo : MonoBehaviour
         dialogoActivo = false;
         panelDialogo.SetActive(false);
         bloqueadorInput.SetActive(false);
+        if(GameManager.Instance.ContadorDeMinijuegos() == npcActual.GetComponent<activarOpciones>().variableConOpciones)
+        {
+            npcActual.GetComponent<activarOpciones>().MostrarOpciones();
+        }
     }
 
     // --------- ANIMACIONES HINT 1 ----------
