@@ -13,9 +13,9 @@ public class tutorial : MonoBehaviour
         juego.SetActive(true);
     }
     public void restart(){
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void continuar(){
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 }
