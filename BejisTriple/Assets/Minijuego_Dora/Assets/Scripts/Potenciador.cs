@@ -21,13 +21,9 @@ public class Potenciador : MonoBehaviour
     public bool congelarEjeZ = true;
 
     [Header("Animación de Activación")]
-    [Tooltip("Escala máxima al ser activado")]
     public float escalaActivacion = 1.3f;
-    [Tooltip("Duración de la animación de escala (segundos)")]
     public float duracionAnimacionEscala = 0.2f;
-    [Tooltip("Duración del fade out (segundos)")]
     public float duracionFadeOut = 1.0f;
-    [Tooltip("Color final al desaparecer (amarillo por defecto)")]
     public Color colorFinal = Color.yellow;
 
     private Rigidbody rb;
@@ -36,15 +32,18 @@ public class Potenciador : MonoBehaviour
     private Color colorOriginal;
     private bool fueActivado = false;
 
+    private SoundController soundController;
+
     void Start()
     {
         ConfigurarComponentes();
         escalaOriginal = transform.localScale;
 
         if (spriteRenderer != null)
-        {
             colorOriginal = spriteRenderer.color;
-        }
+
+        // 🔊 Buscar el SoundController automáticamente
+        soundController = FindFirstObjectByType<SoundController>();
     }
 
     private void ConfigurarComponentes()
@@ -57,7 +56,7 @@ public class Potenciador : MonoBehaviour
             if (congelarEjeZ)
             {
                 rb.constraints = RigidbodyConstraints.FreezePositionZ |
-                               RigidbodyConstraints.FreezeRotation;
+                                 RigidbodyConstraints.FreezeRotation;
             }
             else
             {
@@ -69,20 +68,22 @@ public class Potenciador : MonoBehaviour
 
         Collider col = GetComponent<Collider>();
         if (col != null)
-        {
             col.isTrigger = true;
-        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verificar si es el proyectil por nombre o por referencia
         bool esProyectil = (proyectil != null && other.gameObject == proyectil) ||
-                          (proyectil != null && other.gameObject.name == proyectil.name);
+                           (proyectil != null && other.gameObject.name == proyectil.name);
 
         if (esProyectil && !fueActivado)
         {
             fueActivado = true;
+
+            // 🔊 SONIDO DEL POTENCIADOR
+            if (soundController != null)
+                soundController.PlayCollisionPotenciador();
+
             PotenciarProyectil(other);
             StartCoroutine(AnimarActivacionYDesaparecer());
         }
@@ -90,13 +91,17 @@ public class Potenciador : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // Verificar si es el proyectil por nombre o por referencia
         bool esProyectil = (proyectil != null && other.gameObject == proyectil) ||
-                          (proyectil != null && other.gameObject.name == proyectil.name);
+                           (proyectil != null && other.gameObject.name == proyectil.name);
 
         if (esProyectil && !fueActivado)
         {
             fueActivado = true;
+
+            // 🔊 SONIDO DEL POTENCIADOR
+            if (soundController != null)
+                soundController.PlayCollisionPotenciador();
+
             PotenciarProyectil(other);
             StartCoroutine(AnimarActivacionYDesaparecer());
         }
@@ -108,28 +113,20 @@ public class Potenciador : MonoBehaviour
 
         if (proyectilRb != null)
         {
-            // Guardar la dirección actual
             Vector3 velocidadAntes = proyectilRb.linearVelocity;
-
-            // Multiplicar la velocidad actual (impulso adelante)
             Vector3 nuevaVelocidad = velocidadAntes * factorImpulso;
-
-            // Añadir impulso hacia arriba
             nuevaVelocidad += new Vector3(0, fuerzaArriba, 0);
 
-            // Asignar la nueva velocidad
             proyectilRb.linearVelocity = nuevaVelocidad;
-
-            // También potenciar la velocidad angular
             proyectilRb.angularVelocity *= factorImpulso;
         }
     }
 
     private IEnumerator AnimarActivacionYDesaparecer()
     {
-        // Fase 1: Animación de escala (activación)
         float tiempoTranscurrido = 0f;
 
+        // ⭐ Animación de escala
         while (tiempoTranscurrido < duracionAnimacionEscala)
         {
             tiempoTranscurrido += Time.deltaTime;
@@ -143,7 +140,7 @@ public class Potenciador : MonoBehaviour
 
         transform.localScale = escalaOriginal;
 
-        // Fase 2: Fade out con cambio de color a amarillo
+        // ⭐ Fade Out
         if (spriteRenderer != null)
         {
             tiempoTranscurrido = 0f;
@@ -153,13 +150,11 @@ public class Potenciador : MonoBehaviour
                 tiempoTranscurrido += Time.deltaTime;
                 float progreso = tiempoTranscurrido / duracionFadeOut;
 
-                // Interpolar color de original a amarillo (más agresivo)
                 Color colorActual = Color.Lerp(colorOriginal, colorFinal, progreso);
-
-                // Interpolar alpha de 1 a 0
                 float alpha = Mathf.Lerp(1f, 0f, progreso);
 
-                spriteRenderer.color = new Color(colorActual.r, colorActual.g, colorActual.b, alpha);
+                spriteRenderer.color =
+                    new Color(colorActual.r, colorActual.g, colorActual.b, alpha);
 
                 yield return null;
             }

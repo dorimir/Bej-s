@@ -78,6 +78,8 @@ public class ContadorDistancia : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             OnArrowCollided();
+            if (SoundController.Instance != null)
+                SoundController.Instance.PlayCollisionGround();
         }
     }
 
@@ -107,7 +109,10 @@ public class ContadorDistancia : MonoBehaviour
         {
             effectsManager.PlayConfetti(arrow.position);
         }
-
+        if (SoundController.Instance != null)
+        {
+            SoundController.Instance.PlayWin();
+        }
         WinScreenManager.showWinScreen = true;
         StartCoroutine(LoadWinSceneDelayed());
     }
@@ -174,7 +179,10 @@ public class ContadorDistancia : MonoBehaviour
         {
             loseCount++;
             Debug.Log($"[ContadorDistancia] LOSE COUNT: {loseCount}/{maxTries}");
-
+            if (SoundController.Instance != null)
+            {
+                SoundController.Instance.PlayLose();
+            }
             if (loseCount >= maxTries)
             {
                 Debug.Log("[ContadorDistancia] ===== GAME OVER - 3 INTENTOS AGOTADOS =====");

@@ -131,10 +131,9 @@ public class Bird3D : MonoBehaviour
         isPressed = true;
         birdRigidbody.isKinematic = true;
 
-        if (trayectoria != null)
-        {
-            trayectoria.OnArrowPressed();
-        }
+        // 🔊 Sonido de apuntar
+        SoundController.Instance?.PlayApuntar();
+
 
         if (bowString != null)
         {
@@ -153,6 +152,7 @@ public class Bird3D : MonoBehaviour
         birdRigidbody.isKinematic = false;
         hasLaunched = true;
 
+        SoundController.Instance.PlayArrowShot();
         if (trayectoria != null)
         {
             trayectoria.OnArrowReleased();
@@ -230,6 +230,16 @@ public class Bird3D : MonoBehaviour
             }
         }
 
+        // 🔊 Sonidos según lo que golpea
+        if (collision.collider.CompareTag("Ground"))
+            SoundController.Instance?.PlayCollisionGround();
+
+        else if (collision.collider.CompareTag("Obstaculo"))
+            SoundController.Instance?.PlayCollisionObstaculo();
+
+        else if (collision.collider.CompareTag("Potenciador"))
+            SoundController.Instance?.PlayCollisionPotenciador();
+
         if (targetObject != null && collision.gameObject == targetObject)
         {
             SceneManager.LoadScene("TiroConArco");
@@ -240,19 +250,22 @@ public class Bird3D : MonoBehaviour
     {
         if (trajectoryLine == null) return;
 
-        trajectoryLine.enabled = true;
-        int segments = 20;
+        int segments = 30;                // Más puntos = línea más suave
+        float timeStep = 0.05f;           // Intervalo de tiempo entre puntos
+
         Vector3[] points = new Vector3[segments];
 
         for (int i = 0; i < segments; i++)
         {
-            float t = i * 0.1f;
+            float t = i * timeStep;
+            // Fórmula física: s = v*t + 0.5*g*t^2
             points[i] = birdRigidbody.position + velocity * t + 0.5f * Physics.gravity * t * t;
-            points[i].z = birdRigidbody.position.z;
+            points[i].z = birdRigidbody.position.z;  // Mantener en el plano 2.5D
         }
 
         trajectoryLine.positionCount = segments;
         trajectoryLine.SetPositions(points);
+        trajectoryLine.enabled = true;
     }
 
     public void MarkAsPersistent()
