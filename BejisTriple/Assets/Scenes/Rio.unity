@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: SceneName
-      value: Herreria
+      value: MurallaExterior
       objectReference: {fileID: 0}
     - target: {fileID: 4192176732653453038, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_Sprite

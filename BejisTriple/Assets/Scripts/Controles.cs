@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
             rb.position += dir * speed * Time.deltaTime;
             if(!audioSource.isPlaying)
             {
-                if(SceneManager.GetActiveScene().name == "Rio")
+                if(SceneManager.GetActiveScene().name == "Rio" || SceneManager.GetActiveScene().name == "MurallaExterior")
                 {
                     audioSource.clip = walkingGrass;
                 }
