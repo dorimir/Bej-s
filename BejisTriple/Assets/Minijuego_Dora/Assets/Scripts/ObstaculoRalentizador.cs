@@ -17,11 +17,8 @@ public class ObstaculoRalentizador : MonoBehaviour
     public bool congelarEjeZ = true;
 
     [Header("Animación de Impacto")]
-    [Tooltip("Escala máxima al ser golpeado")]
     public float escalaImpacto = 1.3f;
-    [Tooltip("Duración de la animación de escala (segundos)")]
     public float duracionAnimacionEscala = 0.2f;
-    [Tooltip("Duración del fade out (segundos)")]
     public float duracionFadeOut = 1.0f;
 
     private Rigidbody rb;
@@ -29,10 +26,16 @@ public class ObstaculoRalentizador : MonoBehaviour
     private Vector3 escalaOriginal;
     private bool fueGolpeado = false;
 
+    // 🔊 Referencia al SoundController
+    private SoundController soundController;
+
     void Start()
     {
         ConfigurarComponentes();
         escalaOriginal = transform.localScale;
+
+        // Buscar automáticamente el SoundController
+        soundController = FindFirstObjectByType<SoundController>();
     }
 
     private void ConfigurarComponentes()
@@ -45,7 +48,7 @@ public class ObstaculoRalentizador : MonoBehaviour
             if (congelarEjeZ)
             {
                 rb.constraints = RigidbodyConstraints.FreezePositionZ |
-                               RigidbodyConstraints.FreezeRotation;
+                                 RigidbodyConstraints.FreezeRotation;
             }
             else
             {
@@ -67,6 +70,11 @@ public class ObstaculoRalentizador : MonoBehaviour
         if (proyectil != null && other.gameObject == proyectil && !fueGolpeado)
         {
             fueGolpeado = true;
+
+            // 🔊 SONIDO DEL OBSTÁCULO
+            if (soundController != null)
+                soundController.PlayCollisionObstaculo();
+
             RalentizarProyectil(other);
             StartCoroutine(AnimarImpactoYDesaparecer());
         }
@@ -81,7 +89,6 @@ public class ObstaculoRalentizador : MonoBehaviour
             proyectilRb.linearVelocity *= factorRalentizacion;
             proyectilRb.angularVelocity *= factorRalentizacion;
 
-            Debug.Log($"Proyectil ralentizado al {factorRalentizacion * 100}%");
         }
     }
 
@@ -89,6 +96,7 @@ public class ObstaculoRalentizador : MonoBehaviour
     {
         float tiempoTranscurrido = 0f;
 
+        // ● Animación de escala
         while (tiempoTranscurrido < duracionAnimacionEscala)
         {
             tiempoTranscurrido += Time.deltaTime;
@@ -102,6 +110,7 @@ public class ObstaculoRalentizador : MonoBehaviour
 
         transform.localScale = escalaOriginal;
 
+        // ● Fade out
         if (spriteRenderer != null)
         {
             Color colorOriginal = spriteRenderer.color;

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     AudioSource audioSource;
     public static GameManager Instance { get; private set; }
-    int contadorMinijuegos = 1;
+    int contadorMinijuegos = 0;
 
     /*
     -----------------------------------------

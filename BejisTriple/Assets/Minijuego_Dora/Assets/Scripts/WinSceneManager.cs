@@ -49,6 +49,14 @@ public class WinScreenManager : MonoBehaviour
     public void LoadScene0()
     {
         ContadorDistancia.ResetGame();
+
+        // 🔹 Destruir SoundController si existe
+        if (SoundController.Instance != null)
+        {
+            Destroy(SoundController.Instance.gameObject);
+            SoundController.Instance = null;
+        }
+
         SceneManager.LoadScene("Rio");
     }
 }

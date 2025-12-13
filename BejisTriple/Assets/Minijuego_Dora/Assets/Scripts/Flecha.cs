@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,6 +40,17 @@ public class Bird3D : MonoBehaviour
                                      RigidbodyConstraints.FreezeRotationY;
 
         birdRigidbody.centerOfMass = Vector3.zero;
+
+        // ✨ Ignorar colisión con el arco
+        if (shootRigidbody != null)
+        {
+            Collider arrowCollider = GetComponent<Collider>();
+            Collider bowCollider = shootRigidbody.GetComponent<Collider>();
+            if (arrowCollider != null && bowCollider != null)
+            {
+                Physics.IgnoreCollision(arrowCollider, bowCollider, true);
+            }
+        }
     }
 
     private void Update()
@@ -128,8 +141,14 @@ public class Bird3D : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // ✨ BLOQUEAR si el script está desactivado (ya no responde a clicks)
+        if (!enabled) return;
+
         isPressed = true;
         birdRigidbody.isKinematic = true;
+
+        // 🔊 Sonido de apuntar
+        SoundController.Instance?.PlayApuntar();
 
         if (trayectoria != null)
         {
@@ -146,12 +165,16 @@ public class Bird3D : MonoBehaviour
                                      RigidbodyConstraints.FreezeRotationY |
                                      RigidbodyConstraints.FreezeRotationZ;
     }
-
     private void OnMouseUp()
     {
+        // Guardar esto ANTES de activar el bloqueador
+        if (!isPressed) return; // Si no estaba presionado, ignorar
+
         isPressed = false;
         birdRigidbody.isKinematic = false;
         hasLaunched = true;
+
+        SoundController.Instance.PlayArrowShot();
 
         if (trayectoria != null)
         {
@@ -186,7 +209,30 @@ public class Bird3D : MonoBehaviour
             trajectoryLine.enabled = false;
         }
 
+        // ✨ DESHABILITAR EL SCRIPT INMEDIATAMENTE (ya no responde a clicks)
+        this.enabled = false;
+
         StartCoroutine(Release());
+
+        // ✨ ACTIVAR BLOQUEADOR AL FINAL (después de procesar todo)
+        StartCoroutine(ActivateBlockerDelayed());
+    }
+
+    // Nueva coroutine para activar el bloqueador con un pequeño delay
+    IEnumerator ActivateBlockerDelayed()
+    {
+        yield return new WaitForEndOfFrame();
+        InteractionBlocker.Instance?.ShowBlocker();
+    }
+
+    // ✨ NUEVA COROUTINE
+    IEnumerator ReenableCollider(Collider col)
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (col != null)
+        {
+            col.enabled = true;
+        }
     }
 
     IEnumerator Release()
@@ -212,6 +258,9 @@ public class Bird3D : MonoBehaviour
             if (birdPrefab != null && birdSpawnPos != null)
             {
                 Instantiate(birdPrefab, birdSpawnPos.position, Quaternion.identity);
+
+                // ✨ DESACTIVAR BLOQUEADOR cuando hay nueva flecha
+                InteractionBlocker.Instance?.HideBlocker();
             }
         }
     }
@@ -221,7 +270,6 @@ public class Bird3D : MonoBehaviour
         if (!isPersistent)
         {
             isPersistent = true;
-            Debug.Log("[Bird3D] Flecha colisionó, marcada como persistente");
 
             ContadorDistancia contador = FindFirstObjectByType<ContadorDistancia>();
             if (contador != null)
@@ -229,6 +277,16 @@ public class Bird3D : MonoBehaviour
                 contador.OnArrowCollided();
             }
         }
+
+        // 🔊 Sonidos según lo que golpea
+        if (collision.collider.CompareTag("Ground"))
+            SoundController.Instance?.PlayCollisionGround();
+
+        else if (collision.collider.CompareTag("Obstaculo"))
+            SoundController.Instance?.PlayCollisionObstaculo();
+
+        else if (collision.collider.CompareTag("Potenciador"))
+            SoundController.Instance?.PlayCollisionPotenciador();
 
         if (targetObject != null && collision.gameObject == targetObject)
         {
@@ -240,24 +298,26 @@ public class Bird3D : MonoBehaviour
     {
         if (trajectoryLine == null) return;
 
-        trajectoryLine.enabled = true;
-        int segments = 20;
+        int segments = 30;                // Más puntos = línea más suave
+        float timeStep = 0.05f;           // Intervalo de tiempo entre puntos
+
         Vector3[] points = new Vector3[segments];
 
         for (int i = 0; i < segments; i++)
         {
-            float t = i * 0.1f;
+            float t = i * timeStep;
+            // Fórmula física: s = v*t + 0.5*g*t^2
             points[i] = birdRigidbody.position + velocity * t + 0.5f * Physics.gravity * t * t;
-            points[i].z = birdRigidbody.position.z;
+            points[i].z = birdRigidbody.position.z;  // Mantener en el plano 2.5D
         }
 
         trajectoryLine.positionCount = segments;
         trajectoryLine.SetPositions(points);
+        trajectoryLine.enabled = true;
     }
 
     public void MarkAsPersistent()
     {
         isPersistent = true;
-        Debug.Log("[Bird3D] Flecha marcada manualmente como persistente");
     }
 }

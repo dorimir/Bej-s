@@ -36,7 +36,6 @@ public class GameEffectsManager : MonoBehaviour
         if (mainCamera == null)
         {
             mainCamera = Camera.main;
-            Debug.Log("[GameEffectsManager] Cámara principal encontrada automáticamente");
         }
 
         if (bowTransform != null)
@@ -87,13 +86,11 @@ public class GameEffectsManager : MonoBehaviour
     // ===== CONFETTI VICTORIA =====
     public void PlayConfetti(Vector3 position)
     {
-        Debug.Log($"[GameEffectsManager] PlayConfetti llamado en posición {position}");
         StartCoroutine(SpawnConfetti(position));
     }
 
     private IEnumerator SpawnConfetti(Vector3 position)
     {
-        Debug.Log($"[GameEffectsManager] Spawneando {confettiCount} piezas de confetti");
 
         for (int i = 0; i < confettiCount; i++)
         {
@@ -161,7 +158,6 @@ public class GameEffectsManager : MonoBehaviour
     // ===== ZOOM DERROTA =====
     public void ZoomToArrow(Transform target)
     {
-        Debug.Log($"[GameEffectsManager] ZoomToArrow llamado - target: {target?.name}, camera: {mainCamera?.name}");
 
         if (!isZooming && target != null && mainCamera != null)
         {
@@ -169,7 +165,7 @@ public class GameEffectsManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"[GameEffectsManager] No se puede hacer zoom - isZooming: {isZooming}, target null: {target == null}, camera null: {mainCamera == null}");
+ 
         }
     }
 
@@ -186,7 +182,7 @@ public class GameEffectsManager : MonoBehaviour
 
         float elapsedTime = 0f;
 
-        // Zoom in
+        // Zoom ina
         while (elapsedTime < zoomDuration / 2f)
         {
             elapsedTime += Time.deltaTime;

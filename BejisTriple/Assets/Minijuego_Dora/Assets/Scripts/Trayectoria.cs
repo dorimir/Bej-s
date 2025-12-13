@@ -1,11 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(LineRenderer))]
 public class Trayectoria : MonoBehaviour
 {
     [Header("Referencias")]
     [SerializeField] private Transform puntoInicial; // Tu flecha
     [SerializeField] private Transform shootPosition; // El punto de anclaje
-    [SerializeField] private GameObject puntoPrefab;
 
     [Header("Configuración")]
     [SerializeField] private int numeroDePuntos = 30;
@@ -13,55 +13,41 @@ public class Trayectoria : MonoBehaviour
     [SerializeField] private float launchForce = 15f; // Debe coincidir con Bird3D
 
     [Header("Visual")]
-    [SerializeField] private float opacidad = 0.5f;
+    [SerializeField] private float grosor = 0.05f;
 
-    private GameObject[] puntos;
-    private Camera mainCam;
+    private LineRenderer lineRenderer;
     private bool isPressed = false;
 
-    void Start()
+    void Awake()
     {
-        mainCam = Camera.main;
-
-        Debug.Log("Trayectoria Start - Creando puntos...");
-
-        // Crear los puntos de la trayectoria
-        puntos = new GameObject[numeroDePuntos];
-
-        for (int i = 0; i < numeroDePuntos; i++)
+        lineRenderer = GetComponent<LineRenderer>();
+        if (lineRenderer != null)
         {
-            puntos[i] = Instantiate(puntoPrefab, transform);
-            puntos[i].SetActive(false);
-
-            Debug.Log($"Punto {i} creado");
-
-            // Aplicar opacidad con gradiente (más transparente al inicio, más opaco al final)
-            SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                float factorOpacidad = (float)i / numeroDePuntos; // 0.0 al inicio, 1.0 al final
-                Color color = sr.color;
-                color.a = opacidad * factorOpacidad;
-                sr.color = color;
-            }
+            lineRenderer.positionCount = numeroDePuntos;
+            lineRenderer.enabled = false;
+            lineRenderer.startWidth = grosor;
+            lineRenderer.endWidth = grosor;
         }
-
-        Debug.Log($"Total puntos creados: {puntos.Length}");
+        else
+        {
+            Debug.LogError("[Trayectoria] No se encontró LineRenderer!");
+        }
     }
 
     void Update()
     {
         if (isPressed && puntoInicial != null && shootPosition != null)
         {
-            MostrarTrayectoria();
+            DibujarTrayectoria();
         }
         else
         {
-            OcultarPuntos();
+            if (lineRenderer != null)
+                lineRenderer.enabled = false;
         }
     }
 
-    // Métodos públicos para que Bird3D los llame
+    // Métodos públicos para Bird3D
     public void OnArrowPressed()
     {
         isPressed = true;
@@ -70,77 +56,45 @@ public class Trayectoria : MonoBehaviour
     public void OnArrowReleased()
     {
         isPressed = false;
-        OcultarPuntos();
+        if (lineRenderer != null)
+            lineRenderer.enabled = false;
     }
 
-    void MostrarTrayectoria()
+    private void DibujarTrayectoria()
     {
+        if (lineRenderer == null) return;
+
         Vector3 birdPos = puntoInicial.position;
         Vector3 shootPos = shootPosition.position;
 
-        // Calcular la dirección de lanzamiento (igual que en Bird3D)
-        Vector3 launchDirection = shootPos - birdPos;
-        launchDirection.z = 0;
+        // Dirección y velocidad de lanzamiento
+        Vector3 launchDir = shootPos - birdPos;
+        launchDir.z = 0;
+        float stretchDistance = launchDir.magnitude;
+        Vector3 velocity = launchDir.normalized * launchForce * stretchDistance;
 
-        // Calcular la velocidad inicial
-        float stretchDistance = launchDirection.magnitude;
-        Vector3 velocidad = launchDirection.normalized * launchForce * stretchDistance;
-
+        // Calcular puntos de la línea
         for (int i = 0; i < numeroDePuntos; i++)
         {
-            // Calcular tiempo de simulación
-            float tiempo = i * tiempoEntreSimulacion;
-
-            // Calcular posición usando física (igual que DrawTrajectory en Bird3D)
-            Vector3 posicion = birdPos + velocidad * tiempo + 0.5f * Physics.gravity * tiempo * tiempo;
-            posicion.z = birdPos.z; // Mantener en el mismo plano Z (2D)
-
-            puntos[i].transform.position = posicion;
-            puntos[i].SetActive(true);
-
-            // Aplicar opacidad con gradiente actualizado (más transparente al inicio, más opaco al final)
-            SpriteRenderer sr = puntos[i].GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                float factorOpacidad = (float)i / numeroDePuntos;
-                Color color = sr.color;
-                color.a = opacidad * factorOpacidad;
-                sr.color = color;
-            }
+            float t = i * tiempoEntreSimulacion;
+            Vector3 pointPos = birdPos + velocity * t + 0.5f * Physics.gravity * t * t;
+            pointPos.z = birdPos.z; // Mantener en 2.5D
+            lineRenderer.SetPosition(i, pointPos);
         }
+
+        lineRenderer.enabled = true;
     }
 
-    // Para cambiar la opacidad en tiempo real
-    public void CambiarOpacidad(float nuevaOpacidad)
-    {
-        opacidad = Mathf.Clamp01(nuevaOpacidad);
-    }
-
-    // Para activar/desactivar la trayectoria
-    public void MostrarLinea(bool mostrar)
-    {
-        isPressed = mostrar;
-
-        if (puntos != null && !mostrar)
-        {
-            OcultarPuntos();
-        }
-    }
-
-    private void OcultarPuntos()
-    {
-        if (puntos != null)
-        {
-            foreach (GameObject punto in puntos)
-            {
-                punto.SetActive(false);
-            }
-        }
-    }
-
-    // Para ajustar la fuerza en tiempo real
+    // Para cambiar fuerza o número de puntos en tiempo real
     public void CambiarFuerza(float nuevaFuerza)
     {
         launchForce = nuevaFuerza;
+    }
+
+    public void CambiarNumeroDePuntos(int nuevosPuntos)
+    {
+        numeroDePuntos = nuevosPuntos;
+        if (lineRenderer != null)
+            lineRenderer.positionCount = numeroDePuntos;
     }
 }

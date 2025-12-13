@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 
 public class TutorialPopup : MonoBehaviour
@@ -18,7 +18,7 @@ public class TutorialPopup : MonoBehaviour
     {
         if (spriteObject == null)
         {
-            Debug.LogError("[SpriteTimedAppearance] No se asignó ningún spriteObject.");
+            Debug.LogError("[SpriteTimedAppearance] No se asignÃ³ ningÃºn spriteObject.");
             return;
         }
 
@@ -60,8 +60,7 @@ public class TutorialPopup : MonoBehaviour
     private IEnumerator FadeInBounce()
     {
         float t = 0f;
-
-        Vector3 overshoot = originalScale * 1.10f; // pequeño bounce
+        Vector3 overshoot = originalScale * 1.10f; // pequeÃ±o bounce
         Vector3 undershoot = originalScale * 0.95f;
 
         // Fade + escalar hasta overshoot
@@ -69,33 +68,28 @@ public class TutorialPopup : MonoBehaviour
         {
             t += Time.unscaledDeltaTime;
             float p = t / fadeDuration;
-
             canvasGroup.alpha = p;
             spriteObject.transform.localScale = Vector3.Lerp(Vector3.zero, overshoot, p);
-
             yield return null;
         }
 
-        // Reducir al tamaño real para el efecto bounce
+        // Reducir al tamaÃ±o undershoot para el efecto bounce
         t = 0f;
         while (t < 0.1f)
         {
             t += Time.unscaledDeltaTime;
             float p = t / 0.1f;
-
             spriteObject.transform.localScale = Vector3.Lerp(overshoot, undershoot, p);
-
             yield return null;
         }
 
+        // Ajustar al tamaÃ±o original
         t = 0f;
         while (t < 0.1f)
         {
             t += Time.unscaledDeltaTime;
             float p = t / 0.1f;
-
             spriteObject.transform.localScale = Vector3.Lerp(undershoot, originalScale, p);
-
             yield return null;
         }
     }
@@ -109,9 +103,7 @@ public class TutorialPopup : MonoBehaviour
         {
             t += Time.unscaledDeltaTime;
             float p = t / fadeDuration;
-
             canvasGroup.alpha = Mathf.Lerp(startAlpha, 0f, p);
-
             yield return null;
         }
     }
