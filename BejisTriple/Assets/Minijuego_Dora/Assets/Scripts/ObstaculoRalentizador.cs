@@ -89,7 +89,6 @@ public class ObstaculoRalentizador : MonoBehaviour
             proyectilRb.linearVelocity *= factorRalentizacion;
             proyectilRb.angularVelocity *= factorRalentizacion;
 
-            Debug.Log($"Proyectil ralentizado al {factorRalentizacion * 100}%");
         }
     }
 

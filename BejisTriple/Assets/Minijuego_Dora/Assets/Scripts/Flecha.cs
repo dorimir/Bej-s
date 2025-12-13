@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,6 +40,17 @@ public class Bird3D : MonoBehaviour
                                      RigidbodyConstraints.FreezeRotationY;
 
         birdRigidbody.centerOfMass = Vector3.zero;
+
+        // ✨ Ignorar colisión con el arco
+        if (shootRigidbody != null)
+        {
+            Collider arrowCollider = GetComponent<Collider>();
+            Collider bowCollider = shootRigidbody.GetComponent<Collider>();
+            if (arrowCollider != null && bowCollider != null)
+            {
+                Physics.IgnoreCollision(arrowCollider, bowCollider, true);
+            }
+        }
     }
 
     private void Update()
@@ -128,12 +141,19 @@ public class Bird3D : MonoBehaviour
 
     private void OnMouseDown()
     {
+        // ✨ BLOQUEAR si el script está desactivado (ya no responde a clicks)
+        if (!enabled) return;
+
         isPressed = true;
         birdRigidbody.isKinematic = true;
 
         // 🔊 Sonido de apuntar
         SoundController.Instance?.PlayApuntar();
 
+        if (trayectoria != null)
+        {
+            trayectoria.OnArrowPressed();
+        }
 
         if (bowString != null)
         {
@@ -145,14 +165,17 @@ public class Bird3D : MonoBehaviour
                                      RigidbodyConstraints.FreezeRotationY |
                                      RigidbodyConstraints.FreezeRotationZ;
     }
-
     private void OnMouseUp()
     {
+        // Guardar esto ANTES de activar el bloqueador
+        if (!isPressed) return; // Si no estaba presionado, ignorar
+
         isPressed = false;
         birdRigidbody.isKinematic = false;
         hasLaunched = true;
 
         SoundController.Instance.PlayArrowShot();
+
         if (trayectoria != null)
         {
             trayectoria.OnArrowReleased();
@@ -186,7 +209,30 @@ public class Bird3D : MonoBehaviour
             trajectoryLine.enabled = false;
         }
 
+        // ✨ DESHABILITAR EL SCRIPT INMEDIATAMENTE (ya no responde a clicks)
+        this.enabled = false;
+
         StartCoroutine(Release());
+
+        // ✨ ACTIVAR BLOQUEADOR AL FINAL (después de procesar todo)
+        StartCoroutine(ActivateBlockerDelayed());
+    }
+
+    // Nueva coroutine para activar el bloqueador con un pequeño delay
+    IEnumerator ActivateBlockerDelayed()
+    {
+        yield return new WaitForEndOfFrame();
+        InteractionBlocker.Instance?.ShowBlocker();
+    }
+
+    // ✨ NUEVA COROUTINE
+    IEnumerator ReenableCollider(Collider col)
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (col != null)
+        {
+            col.enabled = true;
+        }
     }
 
     IEnumerator Release()
@@ -212,6 +258,9 @@ public class Bird3D : MonoBehaviour
             if (birdPrefab != null && birdSpawnPos != null)
             {
                 Instantiate(birdPrefab, birdSpawnPos.position, Quaternion.identity);
+
+                // ✨ DESACTIVAR BLOQUEADOR cuando hay nueva flecha
+                InteractionBlocker.Instance?.HideBlocker();
             }
         }
     }
@@ -221,7 +270,6 @@ public class Bird3D : MonoBehaviour
         if (!isPersistent)
         {
             isPersistent = true;
-            Debug.Log("[Bird3D] Flecha colisionó, marcada como persistente");
 
             ContadorDistancia contador = FindFirstObjectByType<ContadorDistancia>();
             if (contador != null)
@@ -271,6 +319,5 @@ public class Bird3D : MonoBehaviour
     public void MarkAsPersistent()
     {
         isPersistent = true;
-        Debug.Log("[Bird3D] Flecha marcada manualmente como persistente");
     }
 }

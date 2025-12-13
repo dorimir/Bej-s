@@ -12,8 +12,7 @@ public class GroundCollider : MonoBehaviour
     {
         // Buscar el SoundController en la escena
         soundController = FindObjectOfType<SoundController>();
-        if (soundController == null)
-            Debug.LogWarning("SoundController no encontrado en la escena!");
+        if (soundController == null) ;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,7 +21,6 @@ public class GroundCollider : MonoBehaviour
         if (collision.gameObject.CompareTag(playerTag) && this.CompareTag(groundTag))
         {
             // Reproducir sonido de colisión con suelo
-            Debug.Log("Jugador tocó el suelo, reproduciendo sonido");
 
             soundController?.PlayCollisionGround();
         }

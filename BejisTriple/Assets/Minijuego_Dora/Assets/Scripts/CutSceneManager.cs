@@ -24,12 +24,10 @@ public class CameraCutSceneController : MonoBehaviour
         {
             PlayCutScene();
             hasPlayedThisSession = true;
-            Debug.Log("[CutScene] Reproduciendo cutscene - Primera vez (loseCount = 0)");
         }
         else
         {
             ActivateGameplayCamera();
-            Debug.Log($"[CutScene] Cutscene omitida - loseCount: {ContadorDistancia.loseCount}, hasPlayed: {hasPlayedThisSession}");
         }
     }
 
@@ -103,6 +101,5 @@ public class CameraCutSceneController : MonoBehaviour
     public static void ResetCutScene()
     {
         hasPlayedThisSession = false;
-        Debug.Log("[CutScene] Cutscene reseteada - Se reproducirá en el próximo juego");
     }
 }

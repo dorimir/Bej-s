@@ -21,7 +21,6 @@ public class ContadorDistancia : MonoBehaviour
         {
             GameObject effectsObj = new GameObject("GameEffectsManager");
             effectsManager = effectsObj.AddComponent<GameEffectsManager>();
-            Debug.Log("[ContadorDistancia] GameEffectsManager creado automáticamente");
         }
     }
 
@@ -59,7 +58,6 @@ public class ContadorDistancia : MonoBehaviour
         hasCollided = false;
         hasWon = false;
 
-        Debug.Log($"[ContadorDistancia] Inicio - Intento {GetCurrentTry()}/{maxTries}, loseCount: {loseCount}");
     }
 
     private void Update()
@@ -166,26 +164,22 @@ public class ContadorDistancia : MonoBehaviour
             AudioListener listener = arrow.GetComponent<AudioListener>();
             if (listener != null) Destroy(listener);
 
-            Debug.Log($"[ContadorDistancia] Flecha congelada: {arrow.gameObject.name}");
         }
 
         if (!hasWon && effectsManager != null && arrow != null)
         {
-            Debug.Log("[ContadorDistancia] Llamando a ZoomToArrow...");
             effectsManager.ZoomToArrow(arrow);
         }
 
         if (!hasWon)
         {
             loseCount++;
-            Debug.Log($"[ContadorDistancia] LOSE COUNT: {loseCount}/{maxTries}");
             if (SoundController.Instance != null)
             {
                 SoundController.Instance.PlayLose();
             }
             if (loseCount >= maxTries)
             {
-                Debug.Log("[ContadorDistancia] ===== GAME OVER - 3 INTENTOS AGOTADOS =====");
                 StartCoroutine(LoadLoseSceneDelayed());
             }
             else
@@ -211,7 +205,6 @@ public class ContadorDistancia : MonoBehaviour
 
     public static void ResetGame()
     {
-        Debug.Log("[ContadorDistancia] ===== RESET COMPLETO =====");
         loseCount = 0;
         WinScreenManager.showWinScreen = false;
 
