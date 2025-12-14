@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
   m_Name: Var2
   m_EditorClassIdentifier: 
-  nombrePJ: Juglar
-  nombreOpcion: Cancion 2
+  nombrePJ: Juglar.
+  nombreOpcion: Cancion 1
   lineas:
-  - textoDialogo: Por ahorrarme el peluquero...
+  - textoDialogo: "\xA1Comer, dormir, tomar!"
     expresionPJ: {fileID: 21300000, guid: 43126f1d632637e4abbff03edf8df4d8, type: 3}
-  - textoDialogo: Me cortaron mal el pelo...
+  - textoDialogo: "\xA1Comer, dormir, tomar!"
+    expresionPJ: {fileID: 21300000, guid: 43126f1d632637e4abbff03edf8df4d8, type: 3}
+  - textoDialogo: "\xA1Valencia se va a conquistar!"
     expresionPJ: {fileID: 21300000, guid: b3b900dd6af69f34babe453fbe0ab017, type: 3}
-  - textoDialogo: Ay que voy a hacer ahora...
+  - textoDialogo: "\xA1Hidra, Medusa, Tif\xF3n y Cerbero!"
     expresionPJ: {fileID: 21300000, guid: c922ddb3708fbb5469242ca674363db3, type: 3}
-  - textoDialogo: Esto no tiene mejora...
+  - textoDialogo: "\xA1Por orden del rey Jaime primero!"
     expresionPJ: {fileID: 21300000, guid: b3b900dd6af69f34babe453fbe0ab017, type: 3}
