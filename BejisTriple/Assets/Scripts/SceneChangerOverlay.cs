@@ -9,11 +9,11 @@ public class SimpleSceneChanger : MonoBehaviour
         SceneManager.LoadScene("Intro_Cutscene");
     }
     public void configuration(){
-        SceneManager.LoadScene(13);
+        SceneManager.LoadScene("Configuraciónmenu");
         Debug.Log("Lol");
     }
     public void Menu(){
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Salir(){
         Application.Quit();

@@ -56,7 +56,7 @@ public class WinScreenManager : MonoBehaviour
             Destroy(SoundController.Instance.gameObject);
             SoundController.Instance = null;
         }
-
+        GameManager.Instance.minijuegoCompletado(4); //sigleton
         SceneManager.LoadScene("Rio");
     }
 }
