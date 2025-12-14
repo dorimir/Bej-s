@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
   m_Name: Var0
   m_EditorClassIdentifier: 
-  nombrePJ: Juglar.
-  nombreOpcion: Cancion 1
+  nombrePJ: Juglar
+  nombreOpcion: Cancion 2
   lineas:
-  - textoDialogo: Las manos hacia arriba
+  - textoDialogo: "\xA1Parch\xEDs, parch\xEDs!"
     expresionPJ: {fileID: 21300000, guid: 43126f1d632637e4abbff03edf8df4d8, type: 3}
-  - textoDialogo: Las manos hacia abajo
+  - textoDialogo: "\xA1Parch\xEDs, parch\xEDs!"
+    expresionPJ: {fileID: 21300000, guid: 43126f1d632637e4abbff03edf8df4d8, type: 3}
+  - textoDialogo: "\xA1Ahora mismo ya nuestro es Bej\xEDs!"
     expresionPJ: {fileID: 21300000, guid: b3b900dd6af69f34babe453fbe0ab017, type: 3}
-  - textoDialogo: Como los gorilas
+  - textoDialogo: "\xA1Cerveza, jam\xF3n, vino y cava!"
     expresionPJ: {fileID: 21300000, guid: c922ddb3708fbb5469242ca674363db3, type: 3}
-  - textoDialogo: Uh uh uh uh
+  - textoDialogo: "\xA1Es la Orden de Calatrava!"
     expresionPJ: {fileID: 21300000, guid: b3b900dd6af69f34babe453fbe0ab017, type: 3}

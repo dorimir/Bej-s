@@ -15,7 +15,16 @@ MonoBehaviour:
   nombrePJ: Arquero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: "Escuch\xE9 que te est\xE1n considerando para ir a Valencia. "
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: "Escuch\xE9 que te est\xE1n considerando para ir a Valencia. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "Pero si realmente quieres que te dejen ir, deber\xE1s practicar
+      m\xE1s. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'No vas a ir a ninguna parte si no sabes tirar una flecha. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "Pero yo te puedo ense\xF1ar. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "\xBFListo? "
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
