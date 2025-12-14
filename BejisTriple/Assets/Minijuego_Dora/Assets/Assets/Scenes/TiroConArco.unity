@@ -3701,7 +3701,7 @@ GameObject:
   - component: {fileID: 1546847150}
   - component: {fileID: 1546847145}
   - component: {fileID: 1546847149}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: flecha
   m_TagString: Player
   m_Icon: {fileID: 0}
