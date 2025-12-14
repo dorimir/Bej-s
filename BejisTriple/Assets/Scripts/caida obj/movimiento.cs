@@ -7,8 +7,10 @@ public class movimiento : MonoBehaviour
     public float speed = 50f;
     private Rigidbody2D rb;
     private Animator animator;
-    public bool miraizq = false;
-    public bool espalda = false;
+    public bool quietoIzq = false;
+    public bool IsRunning=false;
+    public bool IsRunningL=false;
+    public bool miraizq=false;
 
     void Start()
     {
@@ -29,6 +31,29 @@ public class movimiento : MonoBehaviour
         {
             Vector2 dir = (transform.right * hor).normalized;
             rb.position += dir * speed * Time.deltaTime;
+        }
+
+        if(hor>0){
+            animator.SetBool("IsRunning", true);
+            animator.SetBool("IsRunningL", false);
+            animator.SetBool("quietoIzq", false);
+            miraizq=false;
+        }
+        if(hor==0 && !miraizq){
+            animator.SetBool("quietoIzq", false);
+            animator.SetBool("IsRunning", false);
+            animator.SetBool("IsRunningL",false);
+        }
+        if(hor<0){
+            animator.SetBool("IsRunning",false);
+            animator.SetBool("IsRunningL", true);
+            animator.SetBool("quietoIzq",false);
+            miraizq=true;
+        }
+        if(hor==0 && miraizq){
+            animator.SetBool("quietoIzq",true);
+            animator.SetBool("IsRunningL",false);
+            animator.SetBool("IsRunning", false);
         }
     }
 }
