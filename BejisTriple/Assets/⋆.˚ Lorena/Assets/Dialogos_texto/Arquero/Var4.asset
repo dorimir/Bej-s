@@ -15,7 +15,23 @@ MonoBehaviour:
   nombrePJ: Arquero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: 'Lo has hecho muy bien. '
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: 'Lo has hecho muy bien. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'Incluso mejor que yo. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "\xBFSabes? Hay un sujeto al que le veo mucho potencial. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'El establero, el bajito. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'Veo que tiene muchas ganas de tirar con arco, pero nunca viene. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "\xBFY si lo llamas? "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "Ahora despu\xE9s de esto seguro que te dejan ir a Valencia. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'Ve a hablar con tu superior. '
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "Estar\xE1 en el campo de entrenamiento. "
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}

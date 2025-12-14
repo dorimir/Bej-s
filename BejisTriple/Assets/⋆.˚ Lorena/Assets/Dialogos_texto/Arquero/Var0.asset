@@ -15,7 +15,9 @@ MonoBehaviour:
   nombrePJ: Arquero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: Parece que la ciudad ya es de los Calatrava.
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: Parece que la ciudad ya es de los Calatrava.
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: "Tal vez pueda quedarme aqu\xED sin miedo. "
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}

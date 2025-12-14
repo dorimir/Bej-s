@@ -15,7 +15,9 @@ MonoBehaviour:
   nombrePJ: Arquero
   nombreOpcion: NO
   lineas:
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: "Se est\xE1n preparando para partir a Valencia. "
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
-  - textoDialogo: "No pasa nada. Av\xEDsame cuando est\xE9s listo."
+  - textoDialogo: "Se est\xE1n preparando para partir a Valencia. "
+    expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
+  - textoDialogo: 'Espero que tengan suerte. '
     expresionPJ: {fileID: 21300000, guid: 415c23d4a9196cf47b7cd072c7c984dd, type: 3}
