@@ -3854,7 +3854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1513953366
 Transform:
   m_ObjectHideFlags: 0
@@ -3891,7 +3891,7 @@ MonoBehaviour:
   pantallaVictoria: {fileID: 1688011787}
   pantallaDerrota: {fileID: 1160667466}
   Puntoserrores: {fileID: 2145908355}
-  cantidad: 20
+  cantidad: 30
   rangoX: {x: -5, y: 5}
 --- !u!1 &1601671033
 GameObject:
@@ -4945,7 +4945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2049104810
 Transform:
   m_ObjectHideFlags: 0
