@@ -7279,7 +7279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: SceneName
-      value: Rio
+      value: CallePueblo
       objectReference: {fileID: 0}
     - target: {fileID: 4192176732653453038, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_Sprite
@@ -8172,6 +8172,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1310702265}
+    - target: {fileID: 2776284685796818011, guid: 2517bc75e3e0fbf4ea904d4b7d0d7a1f, type: 3}
+      propertyPath: minijuego
+      value: Minigame_rings
+      objectReference: {fileID: 0}
     - target: {fileID: 2776284685796818011, guid: 2517bc75e3e0fbf4ea904d4b7d0d7a1f, type: 3}
       propertyPath: panelOpciones
       value: 

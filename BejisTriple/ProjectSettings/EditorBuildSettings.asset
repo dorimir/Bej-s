@@ -65,6 +65,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Minijuego_Dora/Assets/Assets/Scenes/ResultsScene_Dora.unity
     guid: 52f6dc173b1d10740a61573a73869699
+  - enabled: 1
+    path: Assets/MinijuegoAlexfa/Assets/Scenes/Minigame_rings.unity
+    guid: fcdb71c60f5ea0c408a4368f8314f117
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
