@@ -216,5 +216,5 @@ MonoBehaviour:
   manager: {fileID: 0}
   variableConOpciones: 3
   tieneMinijuego: 1
-  minijuego: 
+  minijuego: TutorialScene_Dora
   haEmpezadoDialogo: 0

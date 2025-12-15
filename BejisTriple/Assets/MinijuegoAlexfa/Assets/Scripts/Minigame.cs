@@ -242,6 +242,8 @@ public class Minigame : MonoBehaviour, PlayerInputActions.ICursorActions
         else
         {
             victoryScreen.SetActive(true);
+            GameManager.Instance.minijuegoCompletado(3);
+            SceneManager.LoadScene("Herreria", LoadSceneMode.Single);
         }
     }
 

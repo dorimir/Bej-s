@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class Turnos : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class Turnos : MonoBehaviour
     private enum Estado { START, J1TURN, J2TURN, ENDED};
     private Estado estado;
 
-    public bool Acabado() // editar con más formas de que acabe el combate
+    public bool Acabado() // editar con mï¿½s formas de que acabe el combate
     {
         if (estado == Estado.ENDED)
         {
@@ -91,9 +91,9 @@ public class Turnos : MonoBehaviour
     {
         Finalizado();
         if (Personaje_1 != null)
-            Debug.Log("J1 Guardia: " + Personaje_1.GetGuardia()); // Cambiar cuando gráficos
+            Debug.Log("J1 Guardia: " + Personaje_1.GetGuardia()); // Cambiar cuando grï¿½ficos
         if (Personaje_2 != null)
-            Debug.Log("J2 Guardia: " + Personaje_2.GetGuardia()); // Cambiar cuando gráficos
+            Debug.Log("J2 Guardia: " + Personaje_2.GetGuardia()); // Cambiar cuando grï¿½ficos
     }
 
     void Finalizado()
@@ -101,12 +101,14 @@ public class Turnos : MonoBehaviour
         if (Personaje_1 == null)
         {
             estado = Estado.ENDED;
-            Debug.Log("J2 gana!"); // Cambiar cuando gráficos
+            Debug.Log("J2 gana!"); // Cambiar cuando grï¿½ficos
+
         }
         if (Personaje_2 == null)
         {
             estado = Estado.ENDED;
-            Debug.Log("J1 gana!"); // Cambiar cuando gráficos
+            Debug.Log("J1 gana!"); // Cambiar cuando grï¿½ficos
+            SceneManager.LoadScene("Final_Cutscene 1", LoadSceneMode.Single);
         }
     }
 
