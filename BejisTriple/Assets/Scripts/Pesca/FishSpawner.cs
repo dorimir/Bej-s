@@ -8,14 +8,16 @@ using UnityEngine.SceneManagement;
 public class FishSpawner : MonoBehaviour
 {
     public GameObject carpa, trucha, siluro, barbo, basura, bubbleParticles;
+    public AudioClip musica;
     public TextMeshProUGUI SeAcaboText, RetryAndExitText;
     public GameObject tutorial;
-    public AudioSource audioSource;
+    public AudioSource audioSource, audioSourceMusica;
 
     public GameObject anzuelo, TimeAndScore;
     public float speed = 3;
 
     public bool IsGameOn = false;
+    public int contadorPeces =0;
 
     /*
     
@@ -29,6 +31,7 @@ public class FishSpawner : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("contador peces: " + contadorPeces);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGame();
@@ -50,6 +53,8 @@ public class FishSpawner : MonoBehaviour
     {
         tutorial.SetActive(false);
         IsGameOn = true;
+        audioSourceMusica.clip = musica;
+        audioSourceMusica.Play();
         StartCoroutine(SpawnFish());
         StartCoroutine(SpawnTrash());
     }
@@ -72,6 +77,9 @@ public class FishSpawner : MonoBehaviour
     private IEnumerator SpawnFish()
     {
         yield return new WaitForSeconds(0.6f);
+        if(contadorPeces<25)
+        {
+            contadorPeces++;
         var rand = new System.Random();
         GameObject spawnedFish;
 
@@ -131,6 +139,7 @@ public class FishSpawner : MonoBehaviour
         spawnedFish.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(speed * (-spawnPointX / 10), spawnedFish.GetComponent<Rigidbody>().linearVelocity.y);
 
         StartCoroutine(DeleteFish(spawnedFish, 7f));
+        }
         if(IsGameOn) StartCoroutine(SpawnFish());
     }
     
@@ -155,6 +164,9 @@ public class FishSpawner : MonoBehaviour
     private IEnumerator SpawnTrash()
     {
         yield return new WaitForSeconds(0.8f);
+        if(contadorPeces<25)
+        {
+            contadorPeces++;
         var rand = new System.Random();
         //Profundidad a la que aparecerá la basura
         float spawnPointY = (float)((rand.NextDouble() * 5) + 6.4f);
@@ -181,12 +193,14 @@ public class FishSpawner : MonoBehaviour
         spawnedTrash.GetComponent<Rigidbody>().linearVelocity = new UnityEngine.Vector2(3 * (-spawnPointX / 10), spawnedTrash.GetComponent<Rigidbody>().linearVelocity.y);
         
         StartCoroutine(DeleteFish(spawnedTrash, 7f));
+        }
         if(IsGameOn) StartCoroutine(SpawnTrash());
     }
 
     private IEnumerator DeleteFish(GameObject fish, float time)
     {
         yield return new WaitForSeconds(time);
+        contadorPeces--;
         if(anzuelo.transform.GetChild(1).gameObject != fish) Destroy(fish);
     }
 }

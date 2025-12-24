@@ -10,6 +10,7 @@ public class Anzuelo : MonoBehaviour
     public GameObject surface;
 
     public GameObject TimeAndScore;
+    public FishSpawner fishSpawner;
     public AudioSource audioSource;
 
     bool HasSomethingHooked = false;
@@ -30,6 +31,7 @@ public class Anzuelo : MonoBehaviour
     {
         if(collision.gameObject == surface)
         {
+            fishSpawner.contadorPeces--;
             switch(transform.GetChild(1).gameObject.tag)
             {
                 case "Trucha":

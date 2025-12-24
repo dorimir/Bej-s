@@ -1068,6 +1068,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120338043}
   m_CullTransparentMesh: 1
+--- !u!1 &132712089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 132712091}
+  - component: {fileID: 132712090}
+  m_Layer: 0
+  m_Name: AudioSourceMusica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &132712090
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132712089}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &132712091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132712089}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &141888233
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,7 +3298,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 87
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3297,6 +3426,7 @@ MonoBehaviour:
   speed: 4
   surface: {fileID: 1881247574}
   TimeAndScore: {fileID: 112071456}
+  fishSpawner: {fileID: 1968610432}
   audioSource: {fileID: 113498204}
 --- !u!54 &1455847632
 Rigidbody:
@@ -3415,8 +3545,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.43255258, y: 0.5041199, z: 3.3085375}
-  m_Center: {x: -0.2288109, y: -0.68389225, z: 1.5542688}
+  m_Size: {x: 0.9461024, y: 1.1460581, z: 3.3085375}
+  m_Center: {x: 0.027963996, y: -0.57690287, z: 1.5542688}
 --- !u!1 &1485592838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,14 +4420,17 @@ MonoBehaviour:
   barbo: {fileID: 3736001764376333169, guid: 0787fa5c4696f7b49b6c52b557a2409d, type: 3}
   basura: {fileID: 6069686215765258259, guid: fdaf8c5b731ebe542a348a33b6b379da, type: 3}
   bubbleParticles: {fileID: 6701371768881260538, guid: 2e1767ddae9fdce4486dcfa83eb47c0b, type: 3}
+  musica: {fileID: 8300000, guid: ac08aba33bb80774092704ad84350067, type: 3}
   SeAcaboText: {fileID: 599786809}
   RetryAndExitText: {fileID: 158720442}
   tutorial: {fileID: 1485592838}
   audioSource: {fileID: 2132661214}
+  audioSourceMusica: {fileID: 132712090}
   anzuelo: {fileID: 1455847630}
   TimeAndScore: {fileID: 112071456}
   speed: 3
   IsGameOn: 0
+  contadorPeces: 0
 --- !u!1 &2038121875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4782,3 +4915,4 @@ SceneRoots:
   - {fileID: 250311563}
   - {fileID: 1272481473}
   - {fileID: 767556662}
+  - {fileID: 132712091}
