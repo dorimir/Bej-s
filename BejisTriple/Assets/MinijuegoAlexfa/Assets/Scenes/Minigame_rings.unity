@@ -4411,7 +4411,7 @@ MonoBehaviour:
   sfxAudioSource: {fileID: 1760610369}
   musicAudioSource: {fileID: 1760610370}
   tutorialScreen: {fileID: 640536068}
-  maxTime: 180
+  maxTime: 120
   timerText: {fileID: 356469307}
   maxEndTime: 5
   goodRingScriptableObject: {fileID: 11400000, guid: c4fc3536ee94e7c4ea983230f86051a0, type: 2}
