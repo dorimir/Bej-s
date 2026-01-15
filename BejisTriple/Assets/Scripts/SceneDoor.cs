@@ -5,9 +5,11 @@ public class SceneDoor : MonoBehaviour, IInteractable
 {
     public string SceneName;
     public AudioClip correr, puerta;
+    public string destinationSpawnID;
 
     public void Interact()
     {
+        GameManager.originalPlayerScale = GameObject.FindGameObjectWithTag("Player").transform.localScale;
         if (SceneTransitionManager.Instance != null)
         {
             SceneTransitionManager.Instance.LoadScene(SceneName);
@@ -23,5 +25,14 @@ public class SceneDoor : MonoBehaviour, IInteractable
             {
                 GameManager.Instance.sonidoCambiarEscena(puerta);
             }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Guardar la puerta de destino antes de cambiar de escena
+            GameManager.nextSpawnID = destinationSpawnID;
+        }
     }
 }

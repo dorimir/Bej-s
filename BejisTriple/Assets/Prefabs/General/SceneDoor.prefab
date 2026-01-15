@@ -71,6 +71,7 @@ MonoBehaviour:
   SceneName: 
   correr: {fileID: 8300000, guid: a9ae49af920197e40acd1a38a752d6fb, type: 3}
   puerta: {fileID: 8300000, guid: 42f5e7859e713bc45b493c10e809133c, type: 3}
+  destinationSpawnID: 
 --- !u!212 &4192176732653453038
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,7 +115,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7efac7aff3cbd384599aebceff53a7fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

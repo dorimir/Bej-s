@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     AudioSource audioSource;
     public static GameManager Instance { get; private set; }
     int contadorMinijuegos = 2;
+
+    public static string nextSpawnID;
+
+    public static Vector3 originalPlayerScale;
+
+    
 
     /*
     -----------------------------------------
@@ -51,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this; //Se crea el singleton la primera vez
             DontDestroyOnLoad(gameObject); //Se hace que se mantenga entre escenas
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }else
         {
             Destroy(gameObject); //Si creamos un segundo Game Manager, este ultimo se destruye
@@ -73,5 +81,30 @@ public class GameManager : MonoBehaviour
     {
         audioSource.clip = clip;
         audioSource.Play();
+    }
+
+     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Buscando spawn con ID: " + nextSpawnID);
+        if (!string.IsNullOrEmpty(nextSpawnID))
+        {
+            SpawnPoint[] spawns = FindObjectsOfType<SpawnPoint>();
+            foreach (var sp in spawns)
+            {
+                if (sp.spawnID == nextSpawnID)
+                {
+                    
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    player.transform.position = sp.transform.position;
+                    player.transform.rotation = sp.transform.rotation;
+                    
+                    break;
+                    
+                }
+                Debug.Log("Spawn encontrado: " + sp.name);
+            }
+
+            nextSpawnID = null;
+        }
     }
 }

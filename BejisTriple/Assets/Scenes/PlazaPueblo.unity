@@ -553,6 +553,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0921751eb47847b4186a7e84e6cf4550, type: 3}
   m_PrefabInstance: {fileID: 214665911}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &218926783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5415885844217890478, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: spawnID
+      value: PlazaPuebloIzq
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906411752635623014, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
 --- !u!1 &260696609
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.03
+      value: -6.2000003
       objectReference: {fileID: 0}
     - target: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -776,8 +837,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+      propertyPath: doorID
+      value: PlazaPuebloIzq
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: SceneName
       value: CallePueblo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+      propertyPath: destinationSpawnID
+      value: callepuebloDere
       objectReference: {fileID: 0}
     - target: {fileID: 4380246258540042190, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_Name
@@ -6783,7 +6852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.04
+      value: -3.82
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6791,7 +6860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.96
+      value: -7.62
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11218,6 +11287,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1912105555
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5415885844217890478, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: spawnID
+      value: PlazaPuebloDere
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906411752635623014, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_Name
+      value: SpawnPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
 --- !u!1001 &1917414782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11267,8 +11397,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+      propertyPath: doorID
+      value: PlazapuebloDere
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: SceneName
       value: MurallaExterior
+      objectReference: {fileID: 0}
+    - target: {fileID: 3878888530392795897, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+      propertyPath: destinationSpawnID
+      value: ExteriorIzq
       objectReference: {fileID: 0}
     - target: {fileID: 4192176732653453038, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_FlipX
@@ -12367,3 +12505,5 @@ SceneRoots:
   - {fileID: 7526271}
   - {fileID: 1706388293}
   - {fileID: 2003560582}
+  - {fileID: 218926783}
+  - {fileID: 1912105555}
