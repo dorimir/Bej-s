@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 48398307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.8, y: 2.29, z: 3.69}
+  m_LocalPosition: {x: -7.8, y: 2.29, z: 3.76}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3177,6 +3177,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
+--- !u!1 &704684049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9918bea97b94d394d8325316d4d05193, type: 3}
+  m_PrefabInstance: {fileID: 1537467373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &748264873
 GameObject:
   m_ObjectHideFlags: 0
@@ -8983,6 +8988,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9918bea97b94d394d8325316d4d05193, type: 3}
   m_PrefabInstance: {fileID: 1537467373}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1281123236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704684049}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 39.37008, y: 90.551186, z: 78.74016}
+  m_Center: {x: 0, y: 19.68504, z: 39.37008}
 --- !u!1 &1287044335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f09754913a7c1fa44956cbe694b9b755, type: 3}
@@ -9909,7 +9935,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9918bea97b94d394d8325316d4d05193, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1307104637}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9918bea97b94d394d8325316d4d05193, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1281123236}
   m_SourcePrefab: {fileID: 100100000, guid: 9918bea97b94d394d8325316d4d05193, type: 3}
 --- !u!1 &1555243484
 GameObject:
