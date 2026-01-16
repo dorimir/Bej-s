@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     AudioSource audioSource;
     public static GameManager Instance { get; private set; }
-    int contadorMinijuegos = 2;
+    int contadorMinijuegos = 0;
 
     public static string nextSpawnID;
 
@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject); //Si creamos un segundo Game Manager, este ultimo se destruye
         }
         audioSource = GetComponent<AudioSource>();
+        
     }
 
     public void minijuegoCompletado(int nuevoValor)
@@ -85,7 +86,6 @@ public class GameManager : MonoBehaviour
 
      private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Buscando spawn con ID: " + nextSpawnID);
         if (!string.IsNullOrEmpty(nextSpawnID))
         {
             SpawnPoint[] spawns = FindObjectsOfType<SpawnPoint>();
@@ -101,7 +101,6 @@ public class GameManager : MonoBehaviour
                     break;
                     
                 }
-                Debug.Log("Spawn encontrado: " + sp.name);
             }
 
             nextSpawnID = null;

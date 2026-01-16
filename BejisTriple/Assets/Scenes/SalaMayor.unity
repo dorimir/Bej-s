@@ -148,15 +148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.51
+      value: 5.06
       objectReference: {fileID: 0}
     - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.63
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.47
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 7994016574043155003, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2600,7 +2600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 780171924090268118, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: destinationSpawnID
-      value: EntrenamSala
+      value: CampoEntrenamiento
       objectReference: {fileID: 0}
     - target: {fileID: 1225704952150439911, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: m_Name
