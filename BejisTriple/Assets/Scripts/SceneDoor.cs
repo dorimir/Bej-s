@@ -9,6 +9,7 @@ public class SceneDoor : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        GameManager.nextSpawnID = destinationSpawnID;
         GameManager.originalPlayerScale = GameObject.FindGameObjectWithTag("Player").transform.localScale;
         if (SceneTransitionManager.Instance != null)
         {

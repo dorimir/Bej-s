@@ -13167,7 +13167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5415885844217890478, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: spawnID
-      value: CampoEntren
+      value: cc
       objectReference: {fileID: 0}
     - target: {fileID: 6906411752635623014, guid: 0c87f2493c8920b408d4b96af9eaea16, type: 3}
       propertyPath: m_Name
@@ -15989,7 +15989,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 780171924090268118, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: destinationSpawnID
-      value: Caballerizas
+      value: ff
       objectReference: {fileID: 0}
     - target: {fileID: 1225704952150439911, guid: ed15c1d790065c043b6d6959b265bc3e, type: 3}
       propertyPath: m_Name
