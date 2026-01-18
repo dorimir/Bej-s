@@ -58,7 +58,7 @@ public class Class_Fighter : MonoBehaviour
 
     public void Tomar_Decision(Class_Fighter enemigo, int tipo)
     {
-        if (tipo == 1)
+        if (tipo == 0)
         {
             if (enemigo.GetGuardia() < 35) {
                 Guardia -= Atq;
@@ -68,8 +68,8 @@ public class Class_Fighter : MonoBehaviour
             } else {
                 Ataque(enemigo);
             }
-         } else if (tipo == 2) {
-            if (enemigo.GetGuardia() < 65) {
+         } else if (tipo == 1) {
+            if (enemigo.GetGuardia() < 35) {
                 Guardia -= Atq;
                 Finalizar(enemigo);
             } else if (Guardia < 25) {
