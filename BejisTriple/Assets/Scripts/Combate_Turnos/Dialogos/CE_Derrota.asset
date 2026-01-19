@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61126908159486049b115571d8f3f4cf, type: 3}
+  m_Name: CE_Derrota
+  m_EditorClassIdentifier: 
+  nombrePJ: Caballero Equilibrado
+  nombreOpcion: 
+  lineas:
+  - textoDialogo: "\xBFEst\xE1s bien?"
+    expresionPJ: {fileID: -1877274711, guid: 3ed0f086f6f64db4f83324c688f7d710, type: 3}
+  - textoDialogo: "S\xED... Tranquilo..."
+    expresionPJ: {fileID: 192603997, guid: 038dd4de6d6d847498d9486ada890115, type: 3}
+  - textoDialogo: "\xA1Continuemos!"
+    expresionPJ: {fileID: -565778147, guid: a8c73a7ebad446441b53a277ba67b67b, type: 3}
+  - textoDialogo: "\xA1Bien dicho! \xA1En guardia!"
+    expresionPJ: {fileID: 16510112, guid: 3ed0f086f6f64db4f83324c688f7d710, type: 3}
