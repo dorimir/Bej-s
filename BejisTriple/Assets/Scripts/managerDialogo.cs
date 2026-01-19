@@ -96,7 +96,7 @@ public class managerDialogo : MonoBehaviour
         float distance = Vector2.Distance(detectionOrigin.position, player.position);
 
         // --- Lógica Hint 1 ---
-        bool shouldShowHint1 = distance <= detectionRadius1;
+        bool shouldShowHint1 = distance >= detectionRadius1;
         if (shouldShowHint1 && !isVisible1 && !isAnimating1)
             StartBounceIn();
         else if (!shouldShowHint1 && isVisible1 && !isAnimating1)
@@ -114,11 +114,11 @@ public class managerDialogo : MonoBehaviour
         {
             if (!shouldShowHint1) // solo aparece si el hint1 está oculto
             {
-                float scaleFactor = Mathf.Clamp01(1f - (distance / detectionRadius2));
+                float scaleFactor = Mathf.Clamp01((distance / detectionRadius2));
                 float targetScale = Mathf.Lerp(minScale2, maxScale2, scaleFactor);
 
                 hintSprite2.gameObject.SetActive(true);
-                hintSprite2.transform.localScale = Vector3.one * targetScale;
+                hintSprite2.transform.localScale = Vector3.one * targetScale / 3;
 
                 Color c = hintSprite2.color;
                 c.a = 1f;
