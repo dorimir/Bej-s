@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class managerDialogo : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class managerDialogo : MonoBehaviour
     // --------- HINT 1 (igual que antes) ----------
     [Header("Hint 1 (cerca del NPC)")]
     public SpriteRenderer hintSprite1;
+    public SpriteRenderer[] GlobosCerca;
     public Transform player;
     public Transform detectionOrigin;
     public float detectionRadius1 = 5f;
@@ -49,6 +51,7 @@ public class managerDialogo : MonoBehaviour
     // --------- HINT 2 (fuera del radio del primero) ----------
     [Header("Hint 2 (cuando estás lejos)")]
     public SpriteRenderer hintSprite2;
+    public SpriteRenderer[] GlobosLejos;
     public float detectionRadius2 = 10f; // radio máximo para el segundo hint
     public float minScale2 = 0.2f;       // escala mínima cuando estás muy lejos
     public float maxScale2 = 1f;         // escala máxima cuando justo sales del radio del primero
@@ -64,6 +67,15 @@ public class managerDialogo : MonoBehaviour
 
     void Start()
     {
+        /*foreach (SpriteRenderer i in GlobosCerca)
+        {
+            if (i != null)
+            {
+                originalScale1 = i.transform.localScale;
+                originalColor1 = i.color;
+                SetHintImmediate(i, originalScale1, originalColor1, false);
+            }
+        }*/
         if (hintSprite1 != null)
         {
             originalScale1 = hintSprite1.transform.localScale;
@@ -71,6 +83,14 @@ public class managerDialogo : MonoBehaviour
             SetHintImmediate(hintSprite1, originalScale1, originalColor1, false);
         }
 
+        /*foreach(SpriteRenderer i in GlobosLejos)
+        {
+            if (i != null)
+            {
+                // arranca oculto
+                SetHintImmediate(i, i.transform.localScale, i.color, false);
+            }
+        }*/
         if (hintSprite2 != null)
         {
             // arranca oculto
@@ -96,7 +116,7 @@ public class managerDialogo : MonoBehaviour
         float distance = Vector2.Distance(detectionOrigin.position, player.position);
 
         // --- Lógica Hint 1 ---
-        bool shouldShowHint1 = distance >= detectionRadius1;
+        bool shouldShowHint1 = distance <= detectionRadius1;
         if (shouldShowHint1 && !isVisible1 && !isAnimating1)
             StartBounceIn();
         else if (!shouldShowHint1 && isVisible1 && !isAnimating1)
@@ -144,8 +164,16 @@ public class managerDialogo : MonoBehaviour
         dialogoActivo = true;
         panelDialogo.SetActive(true);
         MostrarLinea(dialogoActual.lineas[indiceLineaActual]);
+        /*foreach(SpriteRenderer i in GlobosCerca)
+        {
+            SetHintImmediate(i, originalScale1, originalColor1, false);
+        }*/
 
         SetHintImmediate(hintSprite1, originalScale1, originalColor1, false);
+        /*foreach(SpriteRenderer i in GlobosLejos)
+        {
+            if (i != null) i.gameObject.SetActive(false);
+        }*/
         if (hintSprite2 != null) hintSprite2.gameObject.SetActive(false);
     }
 

@@ -12275,11 +12275,15 @@ PrefabInstance:
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2069963741}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: imagenPJ
       value: 
       objectReference: {fileID: 1441902679}
+    - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      propertyPath: maxScale2
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: npcActual
       value: 
@@ -12308,6 +12312,10 @@ PrefabInstance:
       propertyPath: detectionOrigin
       value: 
       objectReference: {fileID: 203812640}
+    - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      propertyPath: detectionRadius1
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: m_Name
       value: DialogoManager

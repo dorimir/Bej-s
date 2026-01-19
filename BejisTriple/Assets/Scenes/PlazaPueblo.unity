@@ -6568,6 +6568,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &536636026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+  m_PrefabInstance: {fileID: 2014541368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &568184319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c318cfc28bc3aa43a23ca2109d97caa, type: 3}
@@ -12243,7 +12248,7 @@ PrefabInstance:
       objectReference: {fileID: 1580040800}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: maxScale2
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: minScale2
@@ -12280,7 +12285,7 @@ PrefabInstance:
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: detectionOrigin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1833070467}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: detectionRadius1
       value: 5
@@ -12362,7 +12367,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5356520780527247220, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       insertIndex: -1
       addedObject: {fileID: 329370902}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014541377}
+    - targetCorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014541376}
+    - targetCorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014541375}
   m_SourcePrefab: {fileID: 100100000, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
 --- !u!4 &2014541369 stripped
 Transform:
@@ -12384,7 +12398,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
   m_PrefabInstance: {fileID: 2014541368}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 536636026}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
@@ -12400,6 +12414,120 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2014723505481230575, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
   m_PrefabInstance: {fileID: 2014541368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2014541375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536636026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelDialogo: {fileID: 1580040803}
+  nombreTexto: {fileID: 1580040802}
+  dialogoTexto: {fileID: 1580040801}
+  imagenPJ: {fileID: 1580040800}
+  panelOpciones: {fileID: 1580040799}
+  bloqueadorInput: {fileID: 1580040791}
+  npcActual: {fileID: 0}
+  dialogoActual: {fileID: 0}
+  indiceLineaActual: 0
+  dialogoActivo: 0
+  audioSource: {fileID: 0}
+  dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
+  boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
+  hintSprite1: {fileID: 861369407}
+  GlobosCerca: []
+  player: {fileID: 640355872}
+  detectionOrigin: {fileID: 2009101867}
+  detectionRadius1: 5
+  bounceInDuration: 0.5
+  fadeOutDuration: 0.3
+  bounceOvershoot: 1.2
+  hintSprite2: {fileID: 260696611}
+  GlobosLejos: []
+  detectionRadius2: 10
+  minScale2: 0
+  maxScale2: 3
+--- !u!114 &2014541376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536636026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelDialogo: {fileID: 1580040803}
+  nombreTexto: {fileID: 1580040802}
+  dialogoTexto: {fileID: 1580040801}
+  imagenPJ: {fileID: 1580040800}
+  panelOpciones: {fileID: 1580040799}
+  bloqueadorInput: {fileID: 1580040791}
+  npcActual: {fileID: 0}
+  dialogoActual: {fileID: 0}
+  indiceLineaActual: 0
+  dialogoActivo: 0
+  audioSource: {fileID: 0}
+  dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
+  boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
+  hintSprite1: {fileID: 316491682}
+  GlobosCerca: []
+  player: {fileID: 640355872}
+  detectionOrigin: {fileID: 1699473167}
+  detectionRadius1: 5
+  bounceInDuration: 0.5
+  fadeOutDuration: 0.3
+  bounceOvershoot: 1.2
+  hintSprite2: {fileID: 804040134}
+  GlobosLejos: []
+  detectionRadius2: 10
+  minScale2: 0
+  maxScale2: 3
+--- !u!114 &2014541377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536636026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelDialogo: {fileID: 1580040803}
+  nombreTexto: {fileID: 1580040802}
+  dialogoTexto: {fileID: 1580040801}
+  imagenPJ: {fileID: 1580040800}
+  panelOpciones: {fileID: 1580040799}
+  bloqueadorInput: {fileID: 1580040791}
+  npcActual: {fileID: 0}
+  dialogoActual: {fileID: 0}
+  indiceLineaActual: 0
+  dialogoActivo: 0
+  audioSource: {fileID: 0}
+  dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
+  boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
+  hintSprite1: {fileID: 1477794484}
+  GlobosCerca: []
+  player: {fileID: 640355872}
+  detectionOrigin: {fileID: 1556141706}
+  detectionRadius1: 5
+  bounceInDuration: 0.5
+  fadeOutDuration: 0.3
+  bounceOvershoot: 1.2
+  hintSprite2: {fileID: 329370903}
+  GlobosLejos: []
+  detectionRadius2: 10
+  minScale2: 0
+  maxScale2: 3
 --- !u!1 &2059024254
 GameObject:
   m_ObjectHideFlags: 0

@@ -6815,6 +6815,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e415fab1a54aec419c7ef3fd2f6fc4f, type: 3}
+--- !u!4 &693621588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6926235582490658233, guid: 6e415fab1a54aec419c7ef3fd2f6fc4f, type: 3}
+  m_PrefabInstance: {fileID: 693621587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &709230885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7841,7 +7846,7 @@ PrefabInstance:
       objectReference: {fileID: 767608355}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: maxScale2
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: minScale2
@@ -7878,7 +7883,7 @@ PrefabInstance:
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: detectionOrigin
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 693621588}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: detectionRadius1
       value: 5
