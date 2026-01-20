@@ -221,7 +221,9 @@ public class managerDialogo : MonoBehaviour
 
     void UpdateBounceIn()
     {
-        float progress = animationTimer1 / bounceInDuration;
+        if(detectionOrigin.gameObject.activeSelf == true)
+        {
+            float progress = animationTimer1 / bounceInDuration;
         if (progress >= 1f)
         {
             hintSprite1.transform.localScale = originalScale1;
@@ -237,6 +239,8 @@ public class managerDialogo : MonoBehaviour
         Color color = hintSprite1.color;
         color.a = originalColor1.a * progress;
         hintSprite1.color = color;
+        }
+        
     }
 
     void StartFadeOut()
