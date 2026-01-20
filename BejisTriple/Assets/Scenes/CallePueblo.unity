@@ -10950,6 +10950,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 560238303}
     - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      propertyPath: maxScale2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: nombreTexto
       value: 
       objectReference: {fileID: 560238305}
@@ -10969,6 +10973,14 @@ PrefabInstance:
       propertyPath: bloqueadorInput
       value: 
       objectReference: {fileID: 560238294}
+    - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      propertyPath: detectionOrigin
+      value: 
+      objectReference: {fileID: 780337837}
+    - target: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      propertyPath: detectionRadius1
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3434787040256608823, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5699997
@@ -11030,7 +11042,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5356520780527247220, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
       insertIndex: -1
       addedObject: {fileID: 248666202}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1935103102}
   m_SourcePrefab: {fileID: 100100000, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
 --- !u!4 &1935103097 stripped
 Transform:
@@ -11042,7 +11057,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2717378552275311372, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
   m_PrefabInstance: {fileID: 1935103096}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1935103101}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
@@ -11058,6 +11073,49 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2014723505481230575, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
   m_PrefabInstance: {fileID: 1935103096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1935103101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
+  m_PrefabInstance: {fileID: 1935103096}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1935103102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935103101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca432df39aa5fb438c5ef45cc7691ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelDialogo: {fileID: 560238306}
+  nombreTexto: {fileID: 560238305}
+  dialogoTexto: {fileID: 560238304}
+  imagenPJ: {fileID: 560238303}
+  panelOpciones: {fileID: 560238302}
+  bloqueadorInput: {fileID: 560238294}
+  npcActual: {fileID: 0}
+  dialogoActual: {fileID: 0}
+  indiceLineaActual: 0
+  dialogoActivo: 0
+  audioSource: {fileID: 0}
+  dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
+  boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
+  hintSprite1: {fileID: 986866833}
+  GlobosCerca: []
+  player: {fileID: 1316798052}
+  detectionOrigin: {fileID: 1787615602}
+  detectionRadius1: 5
+  bounceInDuration: 0.5
+  fadeOutDuration: 0.3
+  bounceOvershoot: 1.2
+  hintSprite2: {fileID: 248666203}
+  GlobosLejos: []
+  detectionRadius2: 10
+  minScale2: 0
+  maxScale2: 3
 --- !u!1001 &1951871222
 PrefabInstance:
   m_ObjectHideFlags: 0
