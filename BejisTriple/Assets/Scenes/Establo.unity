@@ -554,8 +554,8 @@ Transform:
   m_GameObject: {fileID: 188689923}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -1.58, z: 0.103254214}
-  m_LocalScale: {x: 18.329731, y: 1.038, z: 1}
+  m_LocalPosition: {x: 0.495, y: -1.58, z: 0.103254214}
+  m_LocalScale: {x: 14.880336, y: 1.038, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2049104810}
@@ -3891,7 +3891,7 @@ MonoBehaviour:
   pantallaVictoria: {fileID: 1688011787}
   pantallaDerrota: {fileID: 1160667466}
   Puntoserrores: {fileID: 2145908355}
-  cantidad: 30
+  cantidad: 35
   rangoX: {x: -5, y: 5}
 --- !u!1 &1601671033
 GameObject:
