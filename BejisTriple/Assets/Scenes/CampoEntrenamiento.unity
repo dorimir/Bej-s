@@ -11263,7 +11263,7 @@ MonoBehaviour:
   - {fileID: 1466973238}
   - {fileID: 664333964}
   - {fileID: 1664011417}
-  escenaEnLaQueLlegan: 040000000400000002000000
+  escenaEnLaQueLlegan: 040000000400000001000000
 --- !u!4 &1639576156
 Transform:
   m_ObjectHideFlags: 0
