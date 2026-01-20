@@ -132,7 +132,7 @@ public class managerDialogo : MonoBehaviour
         // --- Lógica Hint 2 ---
         if (hintSprite2 != null)
         {
-            if (!shouldShowHint1) // solo aparece si el hint1 está oculto
+            if (!shouldShowHint1 && detectionOrigin.gameObject.activeSelf == true) // solo aparece si el hint1 está oculto
             {
                 float scaleFactor = Mathf.Clamp01((distance / detectionRadius2));
                 float targetScale = Mathf.Lerp(minScale2, maxScale2, scaleFactor);
