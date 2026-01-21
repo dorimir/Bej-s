@@ -15,6 +15,8 @@ public class Iniciar_Minijuego : MonoBehaviour
     public TMP_Text GJ;
     public TMP_Text GE;
 
+    public GameObject canvas;
+
     private bool haPerdidoAnterior;
 
     public managerDialogoCombate manager;
@@ -28,6 +30,7 @@ public class Iniciar_Minijuego : MonoBehaviour
     {
         tipo_enemigo = 0;
         haPerdidoAnterior = false;
+        canvas.SetActive(true);
         CrearCombate();
     }
 
