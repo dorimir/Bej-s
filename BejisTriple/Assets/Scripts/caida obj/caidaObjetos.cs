@@ -50,7 +50,7 @@ public class caidaObjetos : MonoBehaviour
         for(int i = 0; i <= cantidad; i++)
         {
             azar = Random.Range(0,4);
-            if(azar!=2) pos = new Vector3(Random.Range(-2, 10), 8, 0);
+            if(azar!=2) pos = new Vector3(Random.Range(-1, 10), 8, 0);
             else pos = new Vector3(player.transform.position.x, 8, 0);
             
             if(bueno==2) azar = Random.Range(2,4);
