@@ -89,7 +89,9 @@ public class Turnos : MonoBehaviour
         {
             enemigoObj.transform.position = new Vector3(5.3f, 3.24f, -5);
         }
+        enemigoObj.transform.localScale = new Vector3(-1, 1, 1);
         renderer_2.sortingOrder = 5;
+
         estado = Estado.J1TURN;
     }
 
