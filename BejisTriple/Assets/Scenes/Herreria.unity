@@ -5380,7 +5380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.57
+      value: 2.13
       objectReference: {fileID: 0}
     - target: {fileID: 6197843408426158937, guid: 377b9a39e0bfdcf44b54383ffdb20838, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6952,6 +6952,7 @@ MonoBehaviour:
   dialogo: {fileID: 8300000, guid: 63272614d8bb99c4db2c0b2e1b4cca6a, type: 3}
   boton: {fileID: 8300000, guid: 414a229bf5bb370449b900a303b1c0d1, type: 3}
   hintSprite1: {fileID: 0}
+  GlobosCerca: []
   player: {fileID: 0}
   detectionOrigin: {fileID: 0}
   detectionRadius1: 5
@@ -6959,6 +6960,7 @@ MonoBehaviour:
   fadeOutDuration: 0.3
   bounceOvershoot: 1.2
   hintSprite2: {fileID: 0}
+  GlobosLejos: []
   detectionRadius2: 10
   minScale2: 0.2
   maxScale2: 1
@@ -7441,7 +7443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.56
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       propertyPath: m_LocalPosition.z
