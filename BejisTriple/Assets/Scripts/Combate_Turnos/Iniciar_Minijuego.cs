@@ -35,6 +35,8 @@ public class Iniciar_Minijuego : MonoBehaviour
     {
         if (tipo_enemigo >= 3)
         {
+            GameManager.Instance.minijuegoCompletado(5);
+            SceneTransitionManager.Instance.LoadScene("Final_Cutscene 1");
             Debug.Log("Terminado"); return;
         }
         Debug.Log("Creando Combate");
