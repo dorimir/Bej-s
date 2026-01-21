@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using TMPro;
+using UnityEngine.UI;
 
 public class Iniciar_Minijuego : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Iniciar_Minijuego : MonoBehaviour
     public dialogoSO[] Dialogo_Entrada;
 
     public dialogoSO[] Dialogo_Derrota;
+
+    public TMP_Text GJ;
+    public TMP_Text GE;
 
     private bool haPerdidoAnterior;
 
@@ -36,7 +41,7 @@ public class Iniciar_Minijuego : MonoBehaviour
         combate = new GameObject("Combate: " + tipo_enemigo);
         Turnos codigo = combate.AddComponent<Turnos>();
 
-        codigo.Iniciar(tipo_enemigo, sprites[0], sprites[tipo_enemigo + 1]);
+        codigo.Iniciar(tipo_enemigo, sprites[0], sprites[tipo_enemigo + 1], GJ, GE);
 
         if (!haPerdidoAnterior)
         {

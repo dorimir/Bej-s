@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using TMPro;
+using UnityEngine.UI;
 
 public class Turnos : MonoBehaviour
 {
@@ -7,14 +9,19 @@ public class Turnos : MonoBehaviour
     private Class_Fighter Personaje_2;
     private bool yetToShow = false;
 
+    private float delay = 1f;
+
     public Action FinalCombate;
 
     public Sprite J1;
     public Sprite J2;
 
+    public TMP_Text Guardia_Jugador;
+    public TMP_Text Guardia_Enemigo;
+
     public int tipo_enemigo;
 
-    private int[] stats = { 25, 10, 10, 25, 15, 20 };
+    private int[] stats = { 30, 10, 10, 25, 20, 20 };
     private enum Estado { START, J1TURN, J2TURN, ENDED};
     private Estado estado;
 
@@ -39,12 +46,14 @@ public class Turnos : MonoBehaviour
         estado = Estado.J1TURN;
     }
 
-    public void Iniciar(int tipo_e, Sprite J, Sprite E)
+    public void Iniciar(int tipo_e, Sprite J, Sprite E, TMP_Text GJ, TMP_Text GE)
     {
         estado = Estado.START;
         tipo_enemigo = tipo_e;
         J1 = J;
         J2 = E;
+        Guardia_Jugador = GJ;
+        Guardia_Enemigo = GE;
         Preparar_Batalla();
     }
 
@@ -53,11 +62,12 @@ public class Turnos : MonoBehaviour
         GameObject jugadorObj = new GameObject("Jugador");
         Personaje_1 = jugadorObj.AddComponent<Class_Fighter>();
         SpriteRenderer renderer_1 = jugadorObj.AddComponent<SpriteRenderer>();
+        renderer_1.sortingOrder = 5;
 
         Personaje_1.Stats(stats[4], stats[5]);
 
         renderer_1.sprite = J1;
-        jugadorObj.transform.position = new Vector3(-2, 0, 0);
+        jugadorObj.transform.position = new Vector3(-5, 2.84f, -5);
 
         GameObject enemigoObj = new GameObject("Enemigo");
         Personaje_2 = enemigoObj.AddComponent<Class_Fighter>();
@@ -74,7 +84,12 @@ public class Turnos : MonoBehaviour
             Personaje_2.Stats(stats[4], stats[5]);
         }
         renderer_2.sprite = J2;
-        enemigoObj.transform.position = new Vector3(2, 0, 0);
+        enemigoObj.transform.position = new Vector3(5.3f, 2.84f, -5);
+        if (tipo_enemigo == 0)
+        {
+            enemigoObj.transform.position = new Vector3(5.3f, 3.24f, -5);
+        }
+        renderer_2.sortingOrder = 5;
         estado = Estado.J1TURN;
     }
 
@@ -84,7 +99,9 @@ public class Turnos : MonoBehaviour
         if (Personaje_1 != null && Personaje_2 != null)
         {
             Debug.Log("J1 Guardia: " + Personaje_1.GetGuardia()); // Cambiar cuando gráficos
+            Guardia_Jugador.text = "Guardia Jugador: " + Personaje_1.GetGuardia();
             Debug.Log("J2 Guardia: " + Personaje_2.GetGuardia()); // Cambiar cuando gráficos
+            Guardia_Enemigo.text = "Guardia Enemigo: " + Personaje_2.GetGuardia();
         }
     }
 
@@ -110,6 +127,7 @@ public class Turnos : MonoBehaviour
         if (!yetToShow && estado != Estado.ENDED) { Mostrar_Guardias(); yetToShow = true; }
         if (estado == Estado.J1TURN)
         {
+
             if (Input.GetKeyDown(KeyCode.A))
             {
                 Personaje_1.Ataque(Personaje_2);
