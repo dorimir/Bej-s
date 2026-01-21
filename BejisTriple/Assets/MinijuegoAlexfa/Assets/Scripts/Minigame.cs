@@ -232,7 +232,6 @@ public class Minigame : MonoBehaviour, PlayerInputActions.ICursorActions
 
     void End()
     {
-        Debug.Log("FIN");
         EndTimer();
 
         if (loseGame)
@@ -243,6 +242,7 @@ public class Minigame : MonoBehaviour, PlayerInputActions.ICursorActions
         {
             victoryScreen.SetActive(true);
             GameManager.Instance.minijuegoCompletado(3);
+            Cursor.visible = true;
             SceneManager.LoadScene("Herreria", LoadSceneMode.Single);
         }
     }
