@@ -6661,6 +6661,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &505882101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4380246258540042190, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+  m_PrefabInstance: {fileID: 1917414782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &536636026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4696972541429407488, guid: 331b11572f189244283e05c9e7bc5746, type: 3}
@@ -9777,6 +9782,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
   m_PrefabInstance: {fileID: 1917414782}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1568978630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505882101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b586ad1e94e1b8d4d9aea3333edb87f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 1759669388}
+  player: {fileID: 640355872}
+  detectionRadius: 5
+  bounceInDuration: 0.5
+  fadeOutDuration: 0.3
+  bounceOvershoot: 1.2
 --- !u!1 &1574780569
 GameObject:
   m_ObjectHideFlags: 0
@@ -11825,7 +11848,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2895263003799166508, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1759669387}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4380246258540042190, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568978630}
   m_SourcePrefab: {fileID: 100100000, guid: a061f095433a1db4aa46ed9fdecaa0e8, type: 3}
 --- !u!1 &1960940432
 GameObject:
