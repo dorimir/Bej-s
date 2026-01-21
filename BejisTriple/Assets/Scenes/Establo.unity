@@ -3891,7 +3891,7 @@ MonoBehaviour:
   pantallaVictoria: {fileID: 1688011787}
   pantallaDerrota: {fileID: 1160667466}
   Puntoserrores: {fileID: 2145908355}
-  cantidad: 5
+  cantidad: 35
   rangoX: {x: -5, y: 5}
 --- !u!1 &1601671033
 GameObject:
