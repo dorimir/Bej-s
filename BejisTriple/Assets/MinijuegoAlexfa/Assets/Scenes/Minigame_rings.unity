@@ -4568,7 +4568,7 @@ MonoBehaviour:
   newRingDistance: 0.65
   pickableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   startedArmorPos: {fileID: 1698444047}
   ringContainer: {fileID: 903576328}
   gridMaxRow: 7

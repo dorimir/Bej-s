@@ -19,6 +19,11 @@ TagManager:
   - suelo
   - potenciador
   - obstaculo
+  - Box
+  - Trash
+  - Tutorial
+  - Board
+  - Attachment
   layers:
   - Default
   - TransparentFX
@@ -26,7 +31,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pickable
   - Anzuelo
   - Objs caen
   - Flecha
